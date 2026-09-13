@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R01",
+  "split": "regression",
+  "category": "aggregate-individual",
+  "title": "National mean and household distribution",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析平均增长是否意味着典型家庭收入提高，给出分析和一段配图文案；只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R01.txt",
+      "sha256": "fbe6ed39635f82cf12f113a3fe747aae2891bafe50da116bf30a0a63da82f56c"
+    }
+  ],
+  "expected_boundaries": [
+    "National output per person rose 20%.",
+    "Median real household disposable income fell 2%.",
+    "Do not equate national average output and typical household experience."
+  ],
+  "hard_metrics": [
+    "causal_overclaim",
+    "evidence_applicability_error"
+  ],
+  "required_references": [
+    "research-engine.md",
+    "semantic-strength.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

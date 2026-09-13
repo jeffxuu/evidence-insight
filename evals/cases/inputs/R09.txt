@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic network has 12 visible routes, but 9 depend on the same hub. Removing that hub disables those 9 routes. Three routes remain independent. Route count alone is not independent redundancy.

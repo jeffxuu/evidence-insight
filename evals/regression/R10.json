@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R10",
+  "split": "regression",
+  "category": "revision",
+  "title": "Version conflict without silent selection",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析两版数据差异，说明目前能使用哪个口径；只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R10.txt",
+      "sha256": "30b93ae04302446058439af7e355e0d528ff0979710f872094068a76107fab34"
+    }
+  ],
+  "expected_boundaries": [
+    "Identify the revision and duplicate correction.",
+    "Use the revised rate for the current claim and explain the conflict when material.",
+    "Do not describe a change in publication date as a change in the measured year."
+  ],
+  "hard_metrics": [
+    "claim_source_mismatch",
+    "qualifier_loss"
+  ],
+  "required_references": [
+    "multi-source-intake.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

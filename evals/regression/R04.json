@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R04",
+  "split": "regression",
+  "category": "association",
+  "title": "Training and productivity",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "这是否证明培训导致产出提高？分析并写一段文案；只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R04.txt",
+      "sha256": "c8a190f2f4a00fee64335804aeed4fccbb2086468522a8319b7a2408df95fd0f"
+    }
+  ],
+  "expected_boundaries": [
+    "The evidence establishes an association.",
+    "Selection and other plausible explanations remain.",
+    "Do not assert a causal effect."
+  ],
+  "hard_metrics": [
+    "causal_overclaim"
+  ],
+  "required_references": [
+    "research-engine.md",
+    "semantic-strength.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

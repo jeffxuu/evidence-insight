@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R09",
+  "split": "regression",
+  "category": "authorial-stance",
+  "title": "Ownership without compulsory first person",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析并写一段有明确判断的配图文案，不必使用“我”。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R09.txt",
+      "sha256": "ad4c0df32c5d4a95a8cdcc061b81001330b84c2c77edf849ec5dbfe1f9ab5abd"
+    }
+  ],
+  "expected_boundaries": [
+    "Form one supported judgment about independent alternatives versus route count.",
+    "Do not merely recite counts.",
+    "Do not force a metaphor, first person or a prediction."
+  ],
+  "hard_metrics": [
+    "artifact_leakage",
+    "semantic_strength_violation"
+  ],
+  "required_references": [
+    "social-renderer.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

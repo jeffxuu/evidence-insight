@@ -1,0 +1,50 @@
+COMMAND: ["../verification-venv/bin/skills-ref", "validate", "skills/evidence-insight"]
+Valid skill: skills/evidence-insight
+EXIT STATUS: 0
+
+COMMAND: ["/workspace/scratch/6af7b35d1457/evidence-insight/../verification-venv/bin/python", "scripts/validate.py"]
+{
+  "official_spec": "VERIFIED",
+  "runtime_references": 10,
+  "entrypoint_lines": 308,
+  "behavior": "UNVERIFIED",
+  "migration_source_lines": 2026,
+  "markdown_files": 34,
+  "public_regression_cases": 20,
+  "secret_pattern_scan": "VERIFIED (limited patterns; not a complete secrecy guarantee)",
+  "copyright_provenance": "PARTIALLY VERIFIED; see materials review"
+}
+EXIT STATUS: 0
+
+COMMAND: ["/workspace/scratch/6af7b35d1457/evidence-insight/../verification-venv/bin/python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+test_archive_fixture_is_inert (test_engineering.Engineering.test_archive_fixture_is_inert) ... ok
+test_blind_packet_hides_arms (test_engineering.Engineering.test_blind_packet_hides_arms) ... ok
+test_bundle_has_every_reference_and_license (test_engineering.Engineering.test_bundle_has_every_reference_and_license) ... ok
+test_dataset_missing_values_and_unit_conversion (test_engineering.Engineering.test_dataset_missing_values_and_unit_conversion) ... ok
+test_double_adjudication_rejected (test_engineering.Engineering.test_double_adjudication_rejected) ... ok
+test_duplicate_and_synthetic_runs_rejected (test_engineering.Engineering.test_duplicate_and_synthetic_runs_rejected) ... ok
+test_duplicate_yaml_rejected (test_engineering.Engineering.test_duplicate_yaml_rejected) ... ok
+test_empty_report_is_pending (test_engineering.Engineering.test_empty_report_is_pending) ... ok
+test_incomplete_cannot_be_scored (test_engineering.Engineering.test_incomplete_cannot_be_scored) ... ok
+test_injection_needs_trace (test_engineering.Engineering.test_injection_needs_trace) ... ok
+test_mismatched_comparison_rejected (test_engineering.Engineering.test_mismatched_comparison_rejected) ... ok
+test_missing_and_unscorable_are_not_passes (test_engineering.Engineering.test_missing_and_unscorable_are_not_passes) ... ok
+test_original_line_coverage (test_engineering.Engineering.test_original_line_coverage) ... ok
+test_output_tampering_rejected (test_engineering.Engineering.test_output_tampering_rejected) ... ok
+test_preference_resolves_blind_labels (test_engineering.Engineering.test_preference_resolves_blind_labels) ... ok
+test_standalone_runtime (test_engineering.Engineering.test_standalone_runtime) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.043s
+
+OK
+EXIT STATUS: 0
+
+COMMAND: ["/workspace/scratch/6af7b35d1457/evidence-insight/../verification-venv/bin/python", "scripts/validate.py", "--skill-only", "/workspace/scratch/6af7b35d1457/host-smoke/.agents/skills/evidence-insight"]
+{
+  "official_spec": "VERIFIED",
+  "runtime_references": 10,
+  "entrypoint_lines": 308,
+  "behavior": "UNVERIFIED"
+}
+EXIT STATUS: 0

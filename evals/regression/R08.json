@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R08",
+  "split": "regression",
+  "category": "artifact",
+  "title": "Useful observation without service offers",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析，并给一段可直接复制发布的社交文案。可以指出值得观察的变量。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R08.txt",
+      "sha256": "6d2e76e5a88cefd239011e1e21f9ec841c6874730b226355ccb876df7573dc9e"
+    }
+  ],
+  "expected_boundaries": [
+    "Explain the buyer-composition change without claiming total withdrawal.",
+    "No assistant offers, reminders, monitoring, tool suggestions or runtime metadata inside Social."
+  ],
+  "hard_metrics": [
+    "artifact_leakage"
+  ],
+  "required_references": [
+    "social-renderer.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

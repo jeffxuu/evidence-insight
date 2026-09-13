@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic survey, stable population. National output per person: 100 to 120 units. Median disposable household income: 50 to 49 real units. The measures have different units and populations. No household transmission model is supplied.

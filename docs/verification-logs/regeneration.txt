@@ -1,0 +1,42 @@
+CWD: /workspace/scratch/6af7b35d1457/evidence-insight
+COMMAND: ["/workspace/scratch/6af7b35d1457/evidence-insight/../verification-venv/bin/python", "scripts/build_chatgpt_bundle.py"]
+/workspace/scratch/6af7b35d1457/evidence-insight/dist/evidence-insight-chatgpt-1.0.0.zip
+EXIT STATUS: 0
+CWD: /workspace/scratch/6af7b35d1457/host-smoke
+COMMAND: ["npx", "--yes", "skills@1.5.26", "add", "/workspace/scratch/6af7b35d1457/evidence-insight", "--skill", "evidence-insight", "-a", "codex", "--copy", "-y"]
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+│
+●   codex  Agent detected — installing non-interactively
+[?25l│
+◇  Source: /workspace/scratch/6af7b35d1457/evidence-insight
+[?25h[?25l│
+◇  Local path validated
+[?25h[?25l│
+◇  Found 1 skill
+[?25h│
+●  Selected 1 skill: evidence-insight
+
+│
+◇  Installation Summary ──────────────╮
+│                                     │
+│  ./.agents/skills/evidence-insight  │
+│    copy → Codex                     │
+│    overwrites: Codex                │
+│                                     │
+├─────────────────────────────────────╯
+[?25l│
+◇  Installation complete
+[?25h
+│
+◇  Installed 1 skill ─────────────────────╮
+│                                         │
+│  ✓ evidence-insight (copied)            │
+│    → ./.agents/skills/evidence-insight  │
+│                                         │
+├─────────────────────────────────────────╯
+
+│
+└  Done!  Review skills before use; they run with full agent permissions.
+
+EXIT STATUS: 0

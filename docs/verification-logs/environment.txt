@@ -1,0 +1,35 @@
+Recovery date: 2026-09-13T15:08:02.303204+00:00
+EXPECTED: existing isolated interpreter and locked direct dependencies.
+ACTUAL before recovery: bin/python missing; retained packages and broken python3 links.
+IMPACT: previous environment command could not start; no runtime-source change.
+
+COMMAND: ["python", "-m", "venv", "--copies", "/workspace/scratch/6af7b35d1457/verification-venv"]
+EXIT STATUS: 0
+
+COMMAND: ["/workspace/scratch/6af7b35d1457/verification-venv/bin/python", "-m", "pip", "install", "-r", "requirements-dev.txt"]
+Collecting skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref (from -r requirements-dev.txt (line 4))
+  Cloning https://github.com/agentskills/agentskills.git (to revision 69ef37e9424c0a7ea9dd2293b559e43ec8176379) to /tmp/pip-install-j_qv2z0v/skills-ref_0dc92218ce8240948cc5101f74ab27bf
+  Running command git clone --filter=blob:none --quiet https://github.com/agentskills/agentskills.git /tmp/pip-install-j_qv2z0v/skills-ref_0dc92218ce8240948cc5101f74ab27bf
+  Running command git rev-parse -q --verify 'sha^69ef37e9424c0a7ea9dd2293b559e43ec8176379'
+  Running command git fetch -q https://github.com/agentskills/agentskills.git 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+  Resolved https://github.com/agentskills/agentskills.git to commit 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: PyYAML==6.0.3 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from -r requirements-dev.txt (line 1)) (6.0.3)
+Requirement already satisfied: jsonschema==4.26.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from -r requirements-dev.txt (line 2)) (4.26.0)
+Requirement already satisfied: markdown-it-py==4.0.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from -r requirements-dev.txt (line 3)) (4.0.0)
+Requirement already satisfied: attrs>=22.2.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from jsonschema==4.26.0->-r requirements-dev.txt (line 2)) (26.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from jsonschema==4.26.0->-r requirements-dev.txt (line 2)) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from jsonschema==4.26.0->-r requirements-dev.txt (line 2)) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from jsonschema==4.26.0->-r requirements-dev.txt (line 2)) (2026.6.3)
+Requirement already satisfied: mdurl~=0.1 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from markdown-it-py==4.0.0->-r requirements-dev.txt (line 3)) (0.1.2)
+Requirement already satisfied: click>=8.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4)) (8.5.0)
+Requirement already satisfied: strictyaml>=1.7.3 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4)) (1.7.3)
+Requirement already satisfied: typing-extensions>=4.4.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from referencing>=0.28.4->jsonschema==4.26.0->-r requirements-dev.txt (line 2)) (4.16.0)
+Requirement already satisfied: python-dateutil>=2.6.0 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from strictyaml>=1.7.3->skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4)) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /workspace/scratch/6af7b35d1457/verification-venv/lib/python3.12/site-packages (from python-dateutil>=2.6.0->strictyaml>=1.7.3->skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4)) (1.17.0)
+EXIT STATUS: 0

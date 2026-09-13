@@ -1,0 +1,26 @@
+name: Evaluation engineering smoke
+on:
+  push:
+    branches: [main, oss/v1.0.0]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m unittest discover -s tests -v
+      - name: Install isolated skill copy for Codex (file installation only)
+        env:
+          DISABLE_TELEMETRY: '1'
+        run: |
+          install_dir="$(mktemp -d)"
+          cd "$install_dir"
+          npx --yes skills@1.5.26 add "$GITHUB_WORKSPACE" --skill evidence-insight -a codex --copy -y
+          python "$GITHUB_WORKSPACE/scripts/validate.py" --skill-only "$install_dir/.agents/skills/evidence-insight"

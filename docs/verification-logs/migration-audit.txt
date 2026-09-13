@@ -1,0 +1,183 @@
+Migration / diff audit, 2026-09-13 UTC
+Source of truth: pre-existing staged files, migration manifest and owner uploads.
+Source coverage: 2026 nonblank lines. This is NOT behavioral verification.
+Changed source text rows: 42; six rows implement four approved conflict fixes; all others are public naming/metadata/adapter changes.
+Every migrated reference row has a required loading condition present in the entrypoint. Original subsection conditions remain in destination text.
+No source-line deletion, unaccounted text change or new architecture-level conflict identified in this static review.
+Analysis-only and Social-only loading are distinct; Social preserves its own citation override. Shared intake/research/source/pool/semantic/security guidance remains required.
+The 308-line entrypoint does not prove model loading or preservation under finite context. Those remain UNVERIFIED until migration execution.
+External Content Trust Boundary is present in the entrypoint and a pre-intake security reference; I01-I05 fixtures are present. Injection behavior remains UNVERIFIED.
+Copyright/media review: all supplied historical files byte-match uploads; synthetic text/data/archive only; root and skill LICENSE identical. No vendor source code is bundled.
+Rights provenance remains PARTIALLY VERIFIED; owner authorization is not independent proof of every authorship claim.
+Secret-pattern validation passed. Additional privacy candidate locations below were inspected; no actual private contact or credential value identified. Pattern checks are not exhaustive.
+[]
+
+Explicit source text changes:
+S0002 docs/migration/internal/SKILL_V7.6.3.md:2 -> skills/evidence-insight/SKILL.md:2
+Type: public-version-contract
+Source: name: image-insight-evidence-synthesis
+Destination: name: evidence-insight
+S0003 docs/migration/internal/SKILL_V7.6.3.md:3 -> skills/evidence-insight/SKILL.md:12
+Type: public-version-contract
+Source: version: 7.6.3
+Destination:   version: "1.0.0"
+S0005 docs/migration/internal/SKILL_V7.6.3.md:5 -> skills/evidence-insight/SKILL.md:4
+Type: public-version-contract
+Source:   Evidence-synthesis workflow for images, charts, research figures, URLs, documents, datasets,
+Destination:   Evidence-synthesis workflow for charts, screenshots, URLs, papers, documents,
+S0006 docs/migration/internal/SKILL_V7.6.3.md:6 -> skills/evidence-insight/SKILL.md:5
+Type: public-version-contract
+Source:   spreadsheets, archives and mixed-source tasks. It first identifies the supplied evidence,
+Destination:   datasets, spreadsheets, archives and mixed sources. Use when the user asks to
+S0007 docs/migration/internal/SKILL_V7.6.3.md:7 -> skills/evidence-insight/SKILL.md:6
+Type: public-version-contract
+Source:   extracts the highest-quality machine-readable or primary-source material available, then applies
+Destination:   analyze, interpret, verify or produce an evidence-backed social insight from
+S0008 docs/migration/internal/SKILL_V7.6.3.md:8 -> skills/evidence-insight/SKILL.md:7
+Type: public-version-contract
+Source:   metric decomposition, source and applicability checks, competing-explanation tests, editorial
+Destination:   supplied material. Checks metric construction, source applicability, competing
+S0009 docs/migration/internal/SKILL_V7.6.3.md:9 -> skills/evidence-insight/SKILL.md:8
+Type: public-version-contract
+Source:   filtering, and dual analytical/social rendering from one Qualified Evidence Pool.
+Destination:   explanations and semantic strength before analytical and social rendering.
+S0012 docs/migration/internal/SKILL_V7.6.3.md:12 -> skills/evidence-insight/SKILL.md:15
+Type: public-version-contract
+Source: # Image Insight Evidence Synthesis V7.6.3
+Destination: # Evidence Insight
+S0013 docs/migration/internal/SKILL_V7.6.3.md:13 -> skills/evidence-insight/SKILL.md:17
+Type: public-version-contract
+Source: ## Version Contract
+Destination: ## Public runtime contract
+S0015 docs/migration/internal/SKILL_V7.6.3.md:15 -> skills/evidence-insight/SKILL.md:19
+Type: public-version-contract
+Source: Current Skill version: **V7.6.3**
+Destination: Current Skill version: **1.0.0**.
+S0017 docs/migration/internal/SKILL_V7.6.3.md:17 -> skills/evidence-insight/SKILL.md:20
+Type: public-version-contract
+Source: Version synchronization rule:
+Destination: The matching optional ChatGPT adapter must declare exactly **1.0.0**.
+S0018 docs/migration/internal/SKILL_V7.6.3.md:18 -> skills/evidence-insight/SKILL.md:20
+Type: public-version-contract
+Source: - This file and the matching ChatGPT Project Instructions must use the same version: **V7.6.3**.
+Destination: The matching optional ChatGPT adapter must declare exactly **1.0.0**.
+S0019 docs/migration/internal/SKILL_V7.6.3.md:19 -> skills/evidence-insight/SKILL.md:21
+Type: public-version-contract
+Source: - If the Project Instructions show a different version, treat the configuration as mismatched and do not assume the older instructions fully apply.
+Destination: If versions differ, report the configuration mismatch rather than assuming equivalence.
+S0020 docs/migration/internal/SKILL_V7.6.3.md:20 -> skills/evidence-insight/SKILL.md:22
+Type: public-version-contract
+Source: - Future revisions must update the version in:
+Destination: Future revisions update metadata.version, the runtime contract, the adapter and generated package version together.
+S0021 docs/migration/internal/SKILL_V7.6.3.md:21 -> skills/evidence-insight/SKILL.md:22
+Type: public-version-contract
+Source:   1. YAML `version`;
+Destination: Future revisions update metadata.version, the runtime contract, the adapter and generated package version together.
+S0022 docs/migration/internal/SKILL_V7.6.3.md:22 -> skills/evidence-insight/SKILL.md:22
+Type: public-version-contract
+Source:   2. document title;
+Destination: Future revisions update metadata.version, the runtime contract, the adapter and generated package version together.
+S0023 docs/migration/internal/SKILL_V7.6.3.md:23 -> skills/evidence-insight/SKILL.md:22
+Type: public-version-contract
+Source:   3. shortcut / trigger text;
+Destination: Future revisions update metadata.version, the runtime contract, the adapter and generated package version together.
+S0024 docs/migration/internal/SKILL_V7.6.3.md:24 -> skills/evidence-insight/SKILL.md:22
+Type: public-version-contract
+Source:   4. Project Instructions;
+Destination: Future revisions update metadata.version, the runtime contract, the adapter and generated package version together.
+S0025 docs/migration/internal/SKILL_V7.6.3.md:25 -> skills/evidence-insight/SKILL.md:22
+Type: public-version-contract
+Source:   5. downloadable filenames / package name.
+Destination: Future revisions update metadata.version, the runtime contract, the adapter and generated package version together.
+S0027 docs/migration/internal/SKILL_V7.6.3.md:27 -> skills/evidence-insight/SKILL.md:17
+Type: public-version-contract
+Source: ## Runtime Contract
+Destination: ## Public runtime contract
+S0029 docs/migration/internal/SKILL_V7.6.3.md:29 -> skills/evidence-insight/SKILL.md:19
+Type: public-version-contract
+Source: Current runtime version: **V7.6.3**.
+Destination: Current Skill version: **1.0.0**.
+S0120 docs/migration/internal/SKILL_V7.6.3.md:120 -> skills/evidence-insight/SKILL.md:163
+Type: public-version-contract
+Source: - 按V7分析
+Destination: - 按 Evidence Insight 分析
+S0121 docs/migration/internal/SKILL_V7.6.3.md:121 -> skills/evidence-insight/SKILL.md:164
+Type: public-version-contract
+Source: - 按V7.6.3分析
+Destination: - 使用 Evidence Insight 分析
+S0132 docs/migration/internal/SKILL_V7.6.3.md:132 -> skills/evidence-insight/SKILL.md:175
+Type: public-version-contract
+Source: If the user explicitly requests an archived version that is not present, say that the current Project only contains V7.6.3.
+Destination: If the user explicitly requests an unavailable archived version, report that it is unavailable; do not pretend to execute it.
+S0150 docs/migration/internal/SKILL_V7.6.3.md:150 -> skills/evidence-insight/SKILL.md:193
+Type: approved-conflict-fix
+Source: A. the supplied image, or
+Destination: A. any supplied evidence actually read in the current task, or a reproducible calculation from that evidence, or
+S1316 docs/migration/internal/SKILL_V7.6.3.md:1316 -> skills/evidence-insight/references/social-renderer.md:134
+Type: public-version-contract
+Source: Default for Image Insight:
+Destination: Default for Evidence Insight:
+S1501 docs/migration/internal/SKILL_V7.6.3.md:1501 -> skills/evidence-insight/references/analysis-renderer.md:130
+Type: public-version-contract
+Source: Keep all V7.6.3 analytical-output rules unchanged.
+Destination: Keep all 1.0.0 analytical-output rules unchanged.
+S1543 docs/migration/internal/SKILL_V7.6.3.md:1543 -> skills/evidence-insight/references/social-renderer.md:328
+Type: public-version-contract
+Source: - facts already verified during the V7.6.3 research pipeline;
+Destination: - facts already verified during the 1.0.0 research pipeline;
+S1574 docs/migration/internal/SKILL_V7.6.3.md:1574 -> skills/evidence-insight/references/social-renderer.md:359
+Type: approved-conflict-fix
+Source: The caption must depend on the supplied image.
+Destination: The caption must depend on the supplied evidence; when an image is supplied, preserve its specific visual linkage.
+S1679 docs/migration/internal/SKILL_V7.6.3.md:1679 -> skills/evidence-insight/references/social-renderer.md:464
+Type: public-version-contract
+Source: “按V7分析”
+Destination: “按 Evidence Insight 分析”
+S1681 docs/migration/internal/SKILL_V7.6.3.md:1681 -> skills/evidence-insight/references/social-renderer.md:466
+Type: public-version-contract
+Source: “按V7.6.3分析”
+Destination: “使用 Evidence Insight 分析”
+S2019 docs/migration/internal/SKILL_V7.6.3.md:2019 -> skills/evidence-insight/references/social-renderer.md:492
+Type: approved-conflict-fix
+Source: Before writing Output B, silently generate at least 3 possible theses from the vetted evidence packet.
+Destination: Before writing Output B, silently generate at least 3 possible theses when the vetted evidence packet supports them; if fewer are defensible, use only those and never fabricate candidates.
+S2151 docs/migration/internal/SKILL_V7.6.3.md:2151 -> skills/evidence-insight/references/social-renderer.md:624
+Type: approved-conflict-fix
+Source: “After seeing the image and checking the evidence, what is the one thing worth concluding?”
+Destination: “After reading the supplied evidence and checking it, what is the one thing worth concluding?”
+S2184 docs/migration/internal/SKILL_V7.6.3.md:2184 -> skills/evidence-insight/references/social-renderer.md:657
+Type: approved-conflict-fix
+Source: If the image were replaced with an unrelated chart, would the thesis still make sense?
+Destination: If the supplied evidence were replaced with unrelated material, would the thesis still make sense?
+S2205 docs/migration/internal/SKILL_V7.6.3.md:2205 -> skills/evidence-insight/references/social-renderer.md:678
+Type: approved-conflict-fix
+Source: Default structure:
+Destination: Optional organization (the stance-first priorities in §29 and the no-fixed-order rule in §32 take precedence):
+S2729 docs/migration/internal/SKILL_V7.6.3.md:2729 -> skills/evidence-insight/SKILL.md:279
+Type: public-version-contract
+Source: “按V7分析”
+Destination: “按 Evidence Insight 分析”
+S2731 docs/migration/internal/SKILL_V7.6.3.md:2731 -> skills/evidence-insight/SKILL.md:281
+Type: public-version-contract
+Source: “按V7.6.3分析”
+Destination: “使用 Evidence Insight 分析”
+S2733 docs/migration/internal/SKILL_V7.6.3.md:2733 -> skills/evidence-insight/SKILL.md:283
+Type: public-version-contract
+Source: execute the current V7.6.3 workflow.
+Destination: execute the current 1.0.0 workflow.
+A0001 docs/migration/internal/PROJECT_INSTRUCTIONS_V7.6.3.txt:1 -> adapters/chatgpt-project-instructions.txt:1
+Type: public-version-contract
+Source: 【当前项目指示版本：V7.6.3】
+Destination: 【当前项目指示版本：1.0.0】
+A0002 docs/migration/internal/PROJECT_INSTRUCTIONS_V7.6.3.txt:2 -> adapters/chatgpt-project-instructions.txt:2
+Type: public-version-contract
+Source: 【对应 Skill：image-insight-evidence-synthesis V7.6.3】
+Destination: 【对应 Skill：evidence-insight 1.0.0】
+A0006 docs/migration/internal/PROJECT_INSTRUCTIONS_V7.6.3.txt:6 -> adapters/chatgpt-project-instructions.txt:6
+Type: public-version-contract
+Source: 当我提供材料并说“分析”“深度分析”“按V7分析”或“按V7.6.3分析”时，先读取并执行 `SKILL_V7.6.3.md`。研究流程、多来源输入、证据审核、Analysis Renderer 与 Social Renderer 均以 Skill 为唯一规范。
+Destination: 当我提供材料并说“分析”“深度分析”“按 Evidence Insight 分析”或“使用 Evidence Insight 分析”时，先读取并执行 `evidence-insight-runtime-1.0.0.md`。研究流程、多来源输入、证据审核、Analysis Renderer 与 Social Renderer 均以 Skill 为唯一规范。
+A0027 docs/migration/internal/PROJECT_INSTRUCTIONS_V7.6.3.txt:27 -> adapters/chatgpt-project-instructions.txt:27
+Type: public-version-contract
+Source: 当前项目只保留 V7.6.3 运行文件，不维护旧版本映射。
+Destination: 当前项目只保留 1.0.0 运行文件，不维护旧版本映射。

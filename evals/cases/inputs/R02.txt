@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic source A is an unattributed blog claiming a 70% effect. Sources B and C copy A verbatim. The supplied original study abstract reports an association but contains no 70% estimate. Full text is unavailable.

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R13",
+  "split": "regression",
+  "category": "shared-pool",
+  "title": "Separate evidence selection",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析与文案分别选材，文案聚焦备份容量。只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R13.txt",
+      "sha256": "500d0563f84f039a1770d726e943e4aac95ef1d908ae40232b70db3c6728cfe4"
+    }
+  ],
+  "expected_boundaries": [
+    "Social may use the vetted backup fact even if Analysis selects other facts.",
+    "Do not add facts outside the supplied evidence.",
+    "Social need not invent a different discovery."
+  ],
+  "hard_metrics": [
+    "factual_fabrication",
+    "causal_overclaim"
+  ],
+  "required_references": [
+    "qualified-evidence-pool.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

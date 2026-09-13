@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic series: public purchases fall from 60 to 40 units; private purchases rise from 40 to 60; total purchases remain 100. No future demand model is supplied.

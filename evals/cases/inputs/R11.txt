@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic chart caption reports 45 units from release 1. Attached table reports 42 units from release 2. Metadata says release 2 corrects a duplicated row for the same variable, period and population.
