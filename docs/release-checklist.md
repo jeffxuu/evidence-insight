@@ -18,8 +18,8 @@ This is a release candidate, not a tagged release. See [verification](verificati
 - [x] Public synthetic regression cases covering the specified failure types.
 - [x] Anchored rubric, matching-configuration/blinding/reporting tools and deterministic CI definitions.
 - [x] Local Codex file installation verified.
-- [ ] GitHub-hosted CI results verified on the submitted head.
-- [ ] Remote candidate installation verified.
+- [x] GitHub-hosted CI results verified on the initial candidate commit (see verification records).
+- [x] Remote candidate file installation verified; model activation remains blocked.
 - [ ] At least one completed model-host smoke run.
 - [ ] Original-to-public behavioral migration regression completed before vanilla A/B.
 - [ ] Three to five actual paired demos with reviewed provenance.

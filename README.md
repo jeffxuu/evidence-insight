@@ -9,7 +9,7 @@ with checks for source applicability, causality, missing qualifiers and assistan
 [简体中文](README.zh-CN.md) · [Install](docs/installation.md) · [Evaluation](evals/README.md) · [Verification status](docs/verification.md)
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![Validate skill](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml/badge.svg)](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml)
+[![Validate skill](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml/badge.svg?branch=oss%2Fv1.0.0)](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml)
 
 **v1.0.0 release preparation. Benchmark methodology available. Results pending.**
 
@@ -30,14 +30,20 @@ Actual paired demos are pending a working generator host and blind review.
 
 Requires Node.js/npm, a compatible skill host and access to the repository.
 
-**Default-branch command: UNVERIFIED / pending merge.** The main branch does not yet contain the release candidate.
+**Default-branch installation: BLOCKED / pending merge.** The command was tested and found no skills on main.
 
 ```bash
 npx skills add jeffxuu/evidence-insight --skill evidence-insight
 ```
 
 For the proposed release, see [candidate installation and verification](docs/installation.md).
-Local installation with `skills@1.5.26` was verified; that is separate from model execution and default-branch installation.
+Local and remote candidate file installation with `skills@1.5.26` were verified. This does not establish model execution or default-branch installation.
+
+Verified candidate command:
+
+```bash
+npx --yes skills@1.5.26 add 'jeffxuu/evidence-insight#oss/v1.0.0' --skill evidence-insight -a codex --copy -y
+```
 
 After installing in a capable host, supply a chart, URL or data file and ask:
 
@@ -102,7 +108,7 @@ There is no measured improvement, preference percentage, token saving or latency
 | Environment | Format / installation | Behavioral verification |
 | --- | --- | --- |
 | Agent Skills format | Official validator passed | Format compliance alone is not behavior |
-| Codex | Local CLI file installation verified | BLOCKED: model-host authentication/initialization unavailable in the test environment |
+| Codex | Local and remote candidate file installation verified | BLOCKED: model-host authentication/initialization unavailable in the test environment |
 | Other Agent Skills hosts | UNVERIFIED for this project | UNVERIFIED |
 | ChatGPT Projects | Adapter and generated bundle structurally checked | Manual upload/loading UNVERIFIED |
 

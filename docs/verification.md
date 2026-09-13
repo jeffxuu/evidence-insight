@@ -20,10 +20,10 @@ Statuses describe the specific evidence below, not the project as a whole.
 | Migration source accounting | VERIFIED | 2,026 nonblank lines across four supplied files mapped and text-checked |
 | Actual reference loading by a model | UNVERIFIED | Explicit conditions are present; no completed host trace exists |
 | Local deterministic tests | VERIFIED | 16 unittest tests passed again in this session; raw output in verification-logs/engineering.txt |
-| GitHub-hosted CI | UNVERIFIED | Workflows implemented; remote result will be recorded after branch push |
+| GitHub-hosted CI | VERIFIED | Both workflows and all job steps passed on candidate commit 1779c70; exact records below |
 | Local CLI installation for Codex | VERIFIED | skills 1.5.26 discovered one skill and copied it into isolated `.agents/skills/evidence-insight/` |
-| Remote candidate installation | UNVERIFIED | Pending branch push and direct GitHub-source installation |
-| Default-branch installation | BLOCKED | main intentionally lacks release files until owner reviews and merges PR |
+| Remote candidate installation | VERIFIED | Fragment-ref command installed one skill; all 12 file hashes match current source |
+| Default-branch installation | BLOCKED | Exact requested command ran with CLI 1.5.26: exit 1, No skills found; main still contains initialization only |
 | Global / other-host installation | UNVERIFIED | No such installation was executed |
 | Codex model-host smoke | BLOCKED | CLI 0.154.0-alpha.3 initialized without producing model events/output before a 45-second timeout; plugin-service request returned 401 |
 | Original-to-public model equivalence | BLOCKED | No authenticated independent generator execution; only static preservation checked |
@@ -82,3 +82,19 @@ No completed model execution, security pass, reference-loading trace or paired d
 
 The current [official specification](https://agentskills.io/specification) and [skills.sh FAQ](https://www.skills.sh/docs/faq)
 were rechecked on 2026-09-13 UTC. Directory indexing remains unverified.
+
+## Remote verification
+
+Candidate commit: `1779c7078360f86f5ac66bd6a98ea691498e82a2`.
+Its Git tree `e350740c6c8c0f596b26aaff7e0726143b2e480b` exactly matched the local staged tree before the branch update.
+
+- [Validate skill run](https://github.com/jeffxuu/evidence-insight/actions/runs/34765071352): success, all job steps inspected.
+- [Evaluation engineering smoke run](https://github.com/jeffxuu/evidence-insight/actions/runs/34765071351): success, all job steps inspected.
+- [Workflow, job, step and check-run snapshot](verification-logs/remote-ci.json).
+- [All remote installation attempts and file hashes](verification-logs/remote-installation.json).
+- [Successful branch-install log](verification-logs/install-candidate-fixed.txt), [failed tree-URL log](verification-logs/install-candidate.txt), [default-main log](verification-logs/install-default.txt).
+
+The legacy commit-status endpoint returns pending with zero statuses; GitHub Actions uses check runs,
+and both check runs report completed/success. No failed CI job log exists for these successful runs.
+The installation documentation now uses the CLI-supported fragment ref for the slash-containing branch.
+This fixes an installation-command defect only; runtime files and migration mappings are unchanged.

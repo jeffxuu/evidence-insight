@@ -1,11 +1,11 @@
 # Installation and verification
 
-Checked against the official Agent Skills specification and skills CLI source on 2026-09-12 UTC.
+Checked against the official Agent Skills specification and skills CLI source on 2026-09-13 UTC.
 Verification CLI: **skills 1.5.26**. Installed skill version: **1.0.0**.
 
 ## Default command
 
-**UNVERIFIED — pending merge.** The current main branch contains only the repository initialization baseline.
+**BLOCKED — tested before merge: exit 1, no skills found.** The current main branch contains only the repository initialization baseline.
 Do not interpret this target command as a verified main-branch installation:
 
 ```bash
@@ -17,11 +17,13 @@ Node.js/npm, repository network access and a compatible host are prerequisites.
 
 ## Release-candidate branch
 
-Remote branch installation status is recorded in [verification](verification.md); do not infer it from a local-path test.
+**VERIFIED for file installation with skills 1.5.26.** The remote candidate was installed in an isolated Codex project; exactly one skill was discovered and all 12 files matched the source SHA-256 inventory. Model execution remains BLOCKED.
 
 ```bash
-npx --yes skills@1.5.26 add https://github.com/jeffxuu/evidence-insight/tree/oss/v1.0.0/skills/evidence-insight --skill evidence-insight -a codex --copy -y
+npx --yes skills@1.5.26 add 'jeffxuu/evidence-insight#oss/v1.0.0' --skill evidence-insight -a codex --copy -y
 ```
+
+The quoted fragment specifies the complete branch name. In skills 1.5.26, the GitHub `/tree/oss/v1.0.0/...` URL is parsed as ref `oss` and fails; that failed attempt is retained in the logs.
 
 Run in the intended project directory. `--copy` requests a concrete copy for inspection;
 `-a codex` selects Codex, and `-y` accepts CLI prompts. Review the skill before installing.
@@ -82,3 +84,10 @@ Sources: [Agent Skills specification](https://agentskills.io/specification),
 [discovery implementation](https://github.com/vercel-labs/skills/blob/main/src/skills.ts),
 [installation implementation](https://github.com/vercel-labs/skills/blob/main/src/installer.ts),
 [skills.sh FAQ](https://www.skills.sh/docs/faq).
+
+## Actual remote-install records
+
+[Commands, exit statuses and installed file hashes](verification-logs/remote-installation.json)
+record the failed tree-URL attempt, the default-main no-skill result, and the successful fragment-ref installation.
+The successful candidate run used commit `1779c7078360f86f5ac66bd6a98ea691498e82a2`.
+Default-main success must be checked again after owner-approved merge; it is not established by candidate success.

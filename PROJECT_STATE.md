@@ -10,7 +10,8 @@ The runtime never loads this project-management file.
 
 ## Current phase
 
-Local engineering verification complete; preparing the first release-content commit on oss/v1.0.0.
+Candidate commit 1779c7078360f86f5ac66bd6a98ea691498e82a2 is on oss/v1.0.0.
+Both remote workflows passed and candidate file installation succeeded; preparing the review PR.
 The main branch must remain at initialization commit 451f2271ec3b3dfba9ab665d0de5eb99ca2ccb11.
 
 ## Verified evidence
@@ -22,7 +23,7 @@ This is engineering evidence, not model behavioral equivalence.
 
 ## Remaining work and blockers
 
-- Commit/push candidate, inspect actual remote CI, test candidate and default-branch installation separately, create PR.
+- Persist remote verification records and corrected branch-install command, then create the review PR.
 - Model host: BLOCKED; 45-second preflight timed out with plugin-service 401 and no model events.
 - Migration behavior, vanilla A/B and real paired demos: BLOCKED / not executed.
 - Ten independent sealed holdout cases: UNVERIFIED; public blueprints only.
@@ -37,4 +38,4 @@ Generated packages and installed copies are derivatives identified by the SHA-25
 
 ## Next exact action
 
-Publish the verified candidate to oss/v1.0.0, then check remote workflows and installation before opening the PR.
+Create the oss/v1.0.0 → main draft PR after the documentation update passes CI; retain all unresolved behavioral and holdout gates.

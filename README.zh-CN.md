@@ -9,7 +9,7 @@
 [English](README.md) · [安装](docs/installation.md) · [评测方法](evals/README.md) · [验证状态](docs/verification.md)
 
 [![Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![结构验证](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml/badge.svg)](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml)
+[![结构验证](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml/badge.svg?branch=oss%2Fv1.0.0)](https://github.com/jeffxuu/evidence-insight/actions/workflows/validate-skill.yml)
 
 **当前为 v1.0.0 发布准备。已提供 benchmark 方法，结果待完成。**
 
@@ -29,14 +29,20 @@
 
 需要 Node.js/npm、支持 Skill 的宿主，以及仓库访问能力。
 
-**默认分支命令：UNVERIFIED，等待合并后验证。** main 尚未包含发布候选内容。
+**默认分支安装：BLOCKED，等待合并。** 已实际运行该命令，main 上未发现 Skill。
 
 ```bash
 npx skills add jeffxuu/evidence-insight --skill evidence-insight
 ```
 
 候选分支安装方法和准确状态见[安装说明](docs/installation.md)。
-`skills@1.5.26` 本地文件安装已验证；这不等于模型执行或默认分支安装已验证。
+`skills@1.5.26` 本地与远端候选分支的文件安装已验证；这不等于模型执行或默认分支安装已验证。
+
+已验证的候选分支命令：
+
+```bash
+npx --yes skills@1.5.26 add 'jeffxuu/evidence-insight#oss/v1.0.0' --skill evidence-insight -a codex --copy -y
+```
 
 安装后提供材料，说“分析”“深度分析”或“分析并给一段配图文案”。
 “只要分析”“只要配图文案”可以选择输出。默认文风和字数范围沿用中文规则。
@@ -90,7 +96,7 @@ npx skills add jeffxuu/evidence-insight --skill evidence-insight
 | 环境 | 格式／安装 | 行为验证 |
 | --- | --- | --- |
 | Agent Skills | 官方验证器通过 | 格式通过不等于行为正确 |
-| Codex | 本地 CLI 文件安装通过 | BLOCKED：测试环境模型宿主认证／初始化不可用 |
+| Codex | 本地及远端候选分支文件安装通过 | BLOCKED：测试环境模型宿主认证／初始化不可用 |
 | 其他宿主 | 本项目未验证 | UNVERIFIED |
 | ChatGPT Projects | adapter 与生成包结构已检查 | 实际上传和加载 UNVERIFIED |
 
