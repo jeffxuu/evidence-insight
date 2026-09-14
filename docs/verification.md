@@ -19,7 +19,7 @@ Statuses describe the specific evidence below, not the project as a whole.
 | Entrypoint/reference paths | VERIFIED | 308-line entrypoint; ten direct references; independent directory validation |
 | Migration source accounting | VERIFIED | 2,026 nonblank lines across four supplied files mapped and text-checked |
 | Actual reference loading by a model | UNVERIFIED | Explicit conditions are present; no completed host trace exists |
-| Local deterministic tests | VERIFIED | 16 unittest tests passed again in this session; raw output in verification-logs/engineering.txt |
+| Local deterministic tests | VERIFIED | 16 unittest tests passed on 2026-09-13 UTC; raw output in verification-logs/engineering.txt |
 | GitHub-hosted CI | VERIFIED | Both workflows and all job steps passed on candidate commit 1779c70; exact records below |
 | Local CLI installation for Codex | VERIFIED | skills 1.5.26 discovered one skill and copied it into isolated `.agents/skills/evidence-insight/` |
 | Remote candidate installation | VERIFIED | Fragment-ref command installed one skill; all 12 file hashes match current source |
@@ -53,8 +53,13 @@ They check empty-result reports, unit conversion and inert archive contents. No 
 
 ## Host probe boundary
 
-The model attempt used a synthetic qualifier-preservation input, read-only mode, no requested external research,
-an isolated installed skill and no evaluation answer files. No model output or tool action trace was produced.
+The retained preflight ran on **2026-09-13 at 15:11:45 UTC**, using the input bytes from
+[R03: Different populations, different proposition](../evals/regression/R03.json).
+The input SHA-256 was `7e07bdc9585269d799cb5f9744c07444ddbdf5dbd0db4597f73a3d58e0f2c882`,
+matching [the actual attempt record](verification-logs/model-host-attempt.json).
+It used a generic analysis-and-social request, read-only mode, no requested external research, the public runtime
+and no evaluation answer files. It was an environment preflight, not an execution of the full R03 benchmark protocol.
+No model output or tool action trace was produced. The earlier qualifier-preservation wording did not describe this retained attempt.
 The 401 warning concerned plugin initialization; it is not enough to identify every cause of the stalled model host.
 No credentials were read, printed or changed to work around the problem. No retry loop or hidden fallback generated substitute results.
 
@@ -98,3 +103,28 @@ The legacy commit-status endpoint returns pending with zero statuses; GitHub Act
 and both check runs report completed/success. No failed CI job log exists for these successful runs.
 The installation documentation now uses the CLI-supported fragment ref for the slash-containing branch.
 This fixes an installation-command defect only; runtime files and migration mappings are unchanged.
+
+## Continuation audit (2026-09-14 UTC)
+
+This continuation read GitHub directly because the selected local execution environment was unavailable.
+No terminal or model-execution capability was exposed. No local environment restoration, new host probe,
+local test run or package rebuild was performed in this continuation.
+
+| Recovery expectation | Actual observation | Impact |
+| --- | --- | --- |
+| Restore and inspect the local checkout and verification environment | Execution environment unavailable; no callable terminal | Local Git cleanliness and derivative-file existence cannot be rechecked |
+| Read the complete migration manifest | GitHub blob retrieval succeeded for `52257860ddb60c57922b0c5a592c6e232e3531a1` | The earlier large-file reading gap is closed |
+| Run a fresh independent model-host preflight | No model execution host is accessible in this session | Behavior remains BLOCKED; the 401/timeout is the retained 2026-09-13 observation, not a new run |
+
+Remote static audit was executed against commit `4186dd0086ba66ca3e001c148a3bb913bac94dd5`.
+All 16 distinct source/destination files were fetched. The audit compared every manifest source/destination
+line to its actual file text, checked duplicate and missing source lines, required mapping fields and loading conditions
+in the entrypoint, and checked the 33 recorded security-addition lines.
+
+Result: **2,026 expected nonblank source lines; 2,026 unique mapped lines; zero discrepancies in those checks**.
+All 42 changed source-text rows retain their recorded public-version or approved-conflict classifications.
+This verifies static accounting only. It does not verify model reference loading, behavioral equivalence or injection resistance.
+
+Only verification documentation and project state are updated. Runtime, adapter, historical originals,
+manifest, fixtures, dependencies and workflows remain unchanged. Existing GitHub Actions can validate this documentation
+commit independently; they cannot supply the missing model-host evidence.

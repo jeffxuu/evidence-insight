@@ -1,6 +1,6 @@
 # Evidence Insight project state
 
-Updated: 2026-09-13 UTC. Public version: **1.0.0**.
+Updated: 2026-09-14 UTC. Public version: **1.0.0**.
 This management document is not a runtime dependency.
 
 ## Current goal and phase
@@ -34,7 +34,7 @@ Raw commands, versions, outputs, SHA-256 inventories and limits are linked from 
 
 CI evidence for the documentation commit: [validation](https://github.com/jeffxuu/evidence-insight/actions/runs/34765347267)
 and [engineering smoke](https://github.com/jeffxuu/evidence-insight/actions/runs/34765347266).
-This post-PR state update changes only this management file; inspect PR checks for its own head result.
+The 2026-09-14 continuation changes only this management file and verification documentation; inspect PR checks for the current head result.
 
 ## Recovery changes completed
 
@@ -43,11 +43,26 @@ Rebuilt nine stale reference copies whose differences were trailing newlines; ru
 Fixed only the candidate installation command: CLI 1.5.26 needs the full slash-containing ref in a quoted fragment,
 `'jeffxuu/evidence-insight#oss/v1.0.0'`. The failed tree-URL attempt and successful retry are both retained.
 
+## Continuation recovery (2026-09-14 UTC)
+
+GitHub branch and PR recovery succeeded at head 4186dd0086ba66ca3e001c148a3bb913bac94dd5.
+The complete migration manifest was fetched through the GitHub blob API; all 2,026 source-line mappings and
+their destination text/loading conditions were checked against 16 fetched files with zero discrepancies.
+This closes the earlier manifest-reading gap without modifying the manifest or runtime.
+
+The selected local execution environment remains unavailable and no terminal/model execution tool is exposed.
+Local checkout cleanliness, installed copies and the ZIP entity cannot be inspected in this session.
+No new environment restoration, model preflight, local test or bundle rebuild is claimed.
+The earlier 45-second timeout and 401 remain historical evidence from 2026-09-13.
+
+The verification document now identifies the retained host preflight as R03 by date and input hash.
+The earlier qualifier-preservation description was corrected; benchmark status remains BLOCKED.
+
 ## In progress / blocked / not executed
 
 | Status | Remaining scope |
 | --- | --- |
-| BLOCKED | Model-host preflight: timeout after 45 seconds, exit 124, zero model events, plugin-service 401. Effective model/version is unobserved. |
+| BLOCKED | Current local execution environment and fresh model preflight are unavailable. Last model-host preflight: timeout after 45 seconds, exit 124, zero model events, plugin-service 401. Effective model/version is unobserved. |
 | BLOCKED | Internal-to-public migration behavioral comparison; vanilla A/B must follow it. Neither was executed. |
 | BLOCKED | Actual paired model demos and evidence of runtime reference reads or injection behavior. |
 | UNVERIFIED | Ten complete independently sealed holdout cases. Public blueprints are not unseen inputs. |
@@ -67,6 +82,7 @@ Do not merge, tag or create a Release automatically. Keep any further release ch
 
 ## Next exact action
 
-Review Draft PR #1 and resolve a working independent model host before running the protocol's internal/public
-migration regression. Retain the frozen runtime and original cases; only after that gate may vanilla A/B proceed.
-Independent holdout custody and real paired demos remain separate required work.
+Restore an accessible execution environment, check out the current oss/v1.0.0 head, and verify the checkout,
+locked dependencies and derivative identities. Then run a single bounded independent model-host preflight.
+Only after actual model output and tool/reference traces are available should the frozen internal/public migration
+protocol proceed. Vanilla A/B follows that gate. Independent holdout custody and real paired demos remain separate work.
