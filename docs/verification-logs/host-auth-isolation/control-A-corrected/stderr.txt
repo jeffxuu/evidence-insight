@@ -1,0 +1,3 @@
+Reading additional input from stdin...
+2026-09-15T15:34:44.828903Z  WARN codex_features: unknown feature key in config: experimental_use_rmcp_client
+2026-09-15T15:34:44.966422Z  WARN codex_network_proxy::proxy: allowUnixSockets and dangerouslyAllowAllUnixSockets are macOS-only; requests will be rejected on this platform

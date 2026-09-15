@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic single observation: one device recorded 12 units on one date. No comparison, population, denominator or uncertainty estimate is supplied. No external sources are available.

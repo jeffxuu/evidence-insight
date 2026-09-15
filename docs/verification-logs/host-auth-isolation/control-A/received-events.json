@@ -1,0 +1,17 @@
+[
+  {
+    "received_at": "2026-09-15T15:34:03.108621+00:00",
+    "stream": "stderr",
+    "line": "Error loading config.toml: invalid transport\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:03.108731+00:00",
+    "stream": "stderr",
+    "line": "in `mcp_servers.\"node_repl\"`\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:03.108739+00:00",
+    "stream": "stderr",
+    "line": "\n"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "expected": "Retained R04 isolated interpreter for repository validation",
+  "actual": "Interpreter path does not exist in this resumed environment",
+  "command": [
+    "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+    "scripts/validate.py"
+  ],
+  "process_started": false,
+  "exit_code": null,
+  "exception": "FileNotFoundError: [Errno 2] No such file or directory",
+  "stdout": "",
+  "stderr": "No child process was started",
+  "impact": "Local full repository validator not rerun; prior R04 test facts remain historical. New commit CI will run the unchanged validator.",
+  "fallback": "Standard-library documentation reference checks and frozen-file audit only; no dependency restoration or upgrade."
+}

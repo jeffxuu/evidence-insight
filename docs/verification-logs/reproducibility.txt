@@ -1,0 +1,9 @@
+migrate_internal.py
+Migrated 2026 nonblank source lines; main SKILL.md: 308 lines. Behavior UNVERIFIED.
+EXIT STATUS: 0
+build_fixtures.py
+Built 20 public synthetic regression cases. No model outputs or holdout results generated.
+EXIT STATUS: 0
+build_eval_schema.py
+EXIT STATUS: 0
+CHANGED TRACKED FILES: []

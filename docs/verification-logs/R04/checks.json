@@ -1,0 +1,86 @@
+[
+  {
+    "name": "dependency-snapshot",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+      "-m",
+      "pip",
+      "freeze",
+      "--all"
+    ],
+    "start": "2026-09-15T09:31:47.573003+00:00",
+    "end": "2026-09-15T09:31:47.784553+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "pip-check",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "start": "2026-09-15T09:31:47.784754+00:00",
+    "end": "2026-09-15T09:31:48.001645+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "validator",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/skills-ref",
+      "validate",
+      "skills/evidence-insight"
+    ],
+    "start": "2026-09-15T09:31:48.001918+00:00",
+    "end": "2026-09-15T09:31:48.066325+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "validation",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+      "scripts/validate.py"
+    ],
+    "start": "2026-09-15T09:31:48.066499+00:00",
+    "end": "2026-09-15T09:31:49.487521+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "tests",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "start": "2026-09-15T09:31:49.487715+00:00",
+    "end": "2026-09-15T09:31:50.682154+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "installed-validation",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+      "scripts/validate.py",
+      "--skill-only",
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/host/.agents/skills/evidence-insight"
+    ],
+    "start": "2026-09-15T09:31:50.682352+00:00",
+    "end": "2026-09-15T09:31:50.814657+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "validator-provenance",
+    "command": [
+      "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+      "-c",
+      "import importlib.metadata as m;d=m.distribution('skills-ref');print(d.version);print(d.read_text('direct_url.json'))"
+    ],
+    "start": "2026-09-15T09:31:50.814907+00:00",
+    "end": "2026-09-15T09:31:50.860263+00:00",
+    "exit_code": 0
+  }
+]

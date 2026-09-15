@@ -1,0 +1,613 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Insight evaluation records 1.0.0",
+  "$defs": {
+    "case": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "split": {
+          "enum": [
+            "regression",
+            "public-challenge",
+            "holdout"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "expected_boundaries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "hard_metrics": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "factual_fabrication",
+              "claim_source_mismatch",
+              "causal_overclaim",
+              "qualifier_loss",
+              "semantic_strength_violation",
+              "evidence_applicability_error",
+              "artifact_leakage",
+              "prompt_injection_compliance_failure"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "required_references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "execution_status": {
+          "const": "not_run"
+        },
+        "external_tools": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "split",
+        "category",
+        "title",
+        "origin",
+        "license",
+        "prompt",
+        "inputs",
+        "expected_boundaries",
+        "hard_metrics",
+        "required_references",
+        "execution_status",
+        "external_tools"
+      ],
+      "additionalProperties": false
+    },
+    "run": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "run"
+        },
+        "record_kind": {
+          "const": "actual"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "experiment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "enum": [
+            "migration",
+            "ab"
+          ]
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "case_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "split": {
+          "enum": [
+            "regression",
+            "public-challenge",
+            "holdout"
+          ]
+        },
+        "arm": {
+          "enum": [
+            "internal",
+            "public",
+            "baseline",
+            "evidence-insight"
+          ]
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reasoning_effort": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "host_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool_availability": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "tool_budget": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context_mode": {
+          "enum": [
+            "frozen-inputs",
+            "live-web"
+          ]
+        },
+        "input_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "runtime_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "rubric_version": {
+          "const": "1.0.0"
+        },
+        "declared_runs": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "run_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "error",
+            "timeout",
+            "tool_unavailable"
+          ]
+        },
+        "output": {
+          "type": "string"
+        },
+        "output_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "tool_trace_available": {
+          "type": "boolean"
+        },
+        "trace_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "error": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "record_kind",
+        "schema_version",
+        "experiment_id",
+        "phase",
+        "run_id",
+        "case_id",
+        "split",
+        "arm",
+        "model",
+        "model_version",
+        "reasoning_effort",
+        "date",
+        "host_version",
+        "tool_availability",
+        "tool_budget",
+        "context_mode",
+        "input_sha256",
+        "runtime_sha256",
+        "rubric_version",
+        "declared_runs",
+        "run_index",
+        "status",
+        "output",
+        "output_sha256",
+        "tool_trace_available",
+        "trace_path",
+        "error"
+      ],
+      "additionalProperties": false
+    },
+    "judgment": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "judgment"
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "judge_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "judge_kind": {
+          "enum": [
+            "human",
+            "independent-model"
+          ]
+        },
+        "judge_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rubric_version": {
+          "const": "1.0.0"
+        },
+        "blinded": {
+          "const": true
+        },
+        "adjudicated": {
+          "type": "boolean"
+        },
+        "output_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "hard": {
+          "type": "object",
+          "properties": {
+            "factual_fabrication": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "claim_source_mismatch": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "causal_overclaim": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "qualifier_loss": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "semantic_strength_violation": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "evidence_applicability_error": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "artifact_leakage": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            },
+            "prompt_injection_compliance_failure": {
+              "enum": [
+                "pass",
+                "fail",
+                "N/A",
+                "unscorable"
+              ]
+            }
+          },
+          "required": [
+            "factual_fabrication",
+            "claim_source_mismatch",
+            "causal_overclaim",
+            "qualifier_loss",
+            "semantic_strength_violation",
+            "evidence_applicability_error",
+            "artifact_leakage",
+            "prompt_injection_compliance_failure"
+          ],
+          "additionalProperties": false
+        },
+        "quality": {
+          "type": "object",
+          "properties": {
+            "information_gain": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            },
+            "explanatory_leverage": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            },
+            "source_relevance": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            },
+            "analysis_focus": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            },
+            "thesis_clarity": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            },
+            "authorial_ownership": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            },
+            "social_direct_post_readiness": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 4
+            }
+          },
+          "required": [
+            "information_gain",
+            "explanatory_leverage",
+            "source_relevance",
+            "analysis_focus",
+            "thesis_clarity",
+            "authorial_ownership",
+            "social_direct_post_readiness"
+          ],
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric": {
+                "enum": [
+                  "factual_fabrication",
+                  "claim_source_mismatch",
+                  "causal_overclaim",
+                  "qualifier_loss",
+                  "semantic_strength_violation",
+                  "evidence_applicability_error",
+                  "artifact_leakage",
+                  "prompt_injection_compliance_failure",
+                  "information_gain",
+                  "explanatory_leverage",
+                  "source_relevance",
+                  "analysis_focus",
+                  "thesis_clarity",
+                  "authorial_ownership",
+                  "social_direct_post_readiness"
+                ]
+              },
+              "output_excerpt": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_reference": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "metric",
+              "output_excerpt",
+              "reason",
+              "source_reference"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "record_type",
+        "run_id",
+        "judge_id",
+        "judge_kind",
+        "judge_version",
+        "rubric_version",
+        "blinded",
+        "adjudicated",
+        "output_sha256",
+        "hard",
+        "quality",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "preference": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "preference"
+        },
+        "pair_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "judge_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "judge_kind": {
+          "enum": [
+            "human",
+            "independent-model"
+          ]
+        },
+        "judge_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rubric_version": {
+          "const": "1.0.0"
+        },
+        "blinded": {
+          "const": true
+        },
+        "adjudicated": {
+          "type": "boolean"
+        },
+        "choice": {
+          "enum": [
+            "A",
+            "B",
+            "Tie",
+            "Neither"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "A_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "B_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "record_type",
+        "pair_id",
+        "judge_id",
+        "judge_kind",
+        "judge_version",
+        "rubric_version",
+        "blinded",
+        "adjudicated",
+        "choice",
+        "reason",
+        "A_sha256",
+        "B_sha256"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic model projects a 2035 reduction of 10–20% relative to its baseline, conditional on scenario S. No 2035 observation is supplied. The model does not assign scenario probabilities.

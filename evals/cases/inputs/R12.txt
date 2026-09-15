@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic paper: main model controls for age, income and education. Appendix A stratifies by urban/rural residence; Appendix B repeats the analysis excluding one outlier. It remains observational.

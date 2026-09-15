@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-13T15:11:45.433765+00:00",
+  "purpose": "Environment preflight before internal-to-public migration regression; not a scored run",
+  "command": [
+    "/opt/codex/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--json",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-C",
+    "/workspace/scratch/6af7b35d1457/migration-host-probe",
+    "Read skill/SKILL.md and its required references. Analyze input.txt using only the supplied evidence. Return Chinese analysis and one publish-ready social paragraph. Do not browse or write files."
+  ],
+  "requested_model": "gpt-6-astra",
+  "actual_model_version": "unavailable until model events",
+  "reasoning_effort": "high (requested)",
+  "timeout_seconds": 45,
+  "exit_status": 124,
+  "stdout_bytes": 0,
+  "stderr_bytes": 369,
+  "input_sha256": "7e07bdc9585269d799cb5f9744c07444ddbdf5dbd0db4597f73a3d58e0f2c882",
+  "status": "BLOCKED",
+  "migration_comparison": "NOT EXECUTED",
+  "ab": "NOT EXECUTED"
+}

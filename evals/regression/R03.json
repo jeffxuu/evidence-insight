@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R03",
+  "split": "regression",
+  "category": "boundary-evidence",
+  "title": "Different populations, different proposition",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "研究B是不是推翻了研究A？分析并给一段社交文案；只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R03.txt",
+      "sha256": "7e07bdc9585269d799cb5f9744c07444ddbdf5dbd0db4597f73a3d58e0f2c882"
+    }
+  ],
+  "expected_boundaries": [
+    "B does not directly contradict A.",
+    "Do not generalize A beyond its studied setting.",
+    "Population, intervention and outcome are different."
+  ],
+  "hard_metrics": [
+    "evidence_applicability_error"
+  ],
+  "required_references": [
+    "evidence-applicability.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

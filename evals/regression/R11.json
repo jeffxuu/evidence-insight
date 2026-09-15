@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R11",
+  "split": "regression",
+  "category": "image-data",
+  "title": "A chart and its revised table",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "图片和表格不同，分析并给出可追溯数字；只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R11.txt",
+      "sha256": "8117317518cdbb0d379381af55d1cf058bc4d32a1887f1ec4bc5d6668650385e"
+    }
+  ],
+  "expected_boundaries": [
+    "Explain the source-version conflict.",
+    "Use 42 for the revised claim, not an unconditional data-always-wins rule."
+  ],
+  "hard_metrics": [
+    "claim_source_mismatch"
+  ],
+  "required_references": [
+    "multi-source-intake.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

@@ -1,0 +1,29 @@
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Isolated prefix: /workspace/scratch/6af7b35d1457/verification-venv
+PyYAML: 6.0.3
+jsonschema: 4.26.0
+markdown-it-py: 4.0.0
+skills-ref: 0.1.0
+Validator provenance: {"subdirectory": "skills-ref", "url": "https://github.com/agentskills/agentskills.git", "vcs_info": {"commit_id": "69ef37e9424c0a7ea9dd2293b559e43ec8176379", "requested_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379", "vcs": "git"}}
+COMMAND: ["node", "--version"]
+v24.19.0
+EXIT STATUS: 0
+COMMAND: ["npm", "--version"]
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+11.9.0
+EXIT STATUS: 0
+COMMAND: ["npx", "--yes", "skills@1.5.26", "--version"]
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+1.5.26
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+EXIT STATUS: 0
+COMMAND: ["/opt/codex/bin/codex", "--version"]
+codex-cli 0.154.0-alpha.3
+EXIT STATUS: 0
+COMMAND: ["/workspace/scratch/6af7b35d1457/evidence-insight/../verification-venv/bin/python", "-m", "pip", "check"]
+No broken requirements found.
+EXIT STATUS: 0

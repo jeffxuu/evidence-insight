@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "venv",
+    "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv"
+  ],
+  "start": "2026-09-15T09:29:29.890511+00:00",
+  "end": "2026-09-15T09:29:31.759928+00:00",
+  "exit_code": 0
+}

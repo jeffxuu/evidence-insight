@@ -1,0 +1,24 @@
+{
+  "record_validation_command": [
+    "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/venv/bin/python",
+    "scripts/validate.py"
+  ],
+  "exit_code": 0,
+  "changed_tracked_files": [
+    "PROJECT_STATE.md",
+    "docs/verification.md"
+  ],
+  "frozen_file_diff": [],
+  "engineering_tests_run": 16,
+  "engineering_tests_failed": 0,
+  "model_preflight_status": "BLOCKED",
+  "model_preflight_normalized_exit": 124,
+  "model_tests_passed": null,
+  "privacy_review": "Limited repository secret-pattern scan passed; raw evidence manually inspected for credentials and private content; no credential files read. Not a universal secrecy guarantee.",
+  "whitespace_check": {
+    "default_exit_code": 2,
+    "finding": "Raw install.stdout.txt ends with the CLI-produced blank line. Exact captured bytes retained.",
+    "adjusted_command": "git -c core.whitespace=-blank-at-eof diff --cached --check",
+    "adjusted_exit_code": 0
+  }
+}

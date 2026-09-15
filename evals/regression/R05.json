@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R05",
+  "split": "regression",
+  "category": "decline",
+  "title": "A smaller positive stock",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "用材料分析，并写一段简洁社交文案。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R05.txt",
+      "sha256": "561f9d10148eab9201740ac91989bdca4269640243945255f446c36686fe0835"
+    }
+  ],
+  "expected_boundaries": [
+    "The stock declined 40% from 2023 to 2025.",
+    "It did not disappear.",
+    "Do not infer a later zero crossing."
+  ],
+  "hard_metrics": [
+    "semantic_strength_violation",
+    "factual_fabrication"
+  ],
+  "required_references": [
+    "semantic-strength.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

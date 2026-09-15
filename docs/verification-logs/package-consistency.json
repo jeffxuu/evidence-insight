@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-13T15:10:09.806749+00:00",
+  "source_runtime_sha256": {
+    "SKILL.md": "d0e850a0e4ce3c9e7a27e666c053bf9cae497c20fa3b4a7690d9918019721812",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "references/security-boundary.md": "c19f1b711d8b88036beb038fb4032d58772d8fd6b3352151adaf162bce429e62",
+    "references/qualified-evidence-pool.md": "7b1f572bbbae13091e7fae4003c8feb20294b105f93f2aefe33779bcee4a818f",
+    "references/analysis-renderer.md": "a953be354f29f504618072b72b3f222bce61e0b5b8fe2528da8678bf94dba3ae",
+    "references/research-engine.md": "72b7ca6a1a0e5ecfc39216de7a446a4cb546e8fc1b3e136e76ca0d57de74ec26",
+    "references/multi-source-intake.md": "845096e5443ed7668af10285fb8f8dd24c7bca2c1ac17114c42de3aa68b6166a",
+    "references/evidence-applicability.md": "f728db52f7bf4ce079637ca70f383a0950016a3a34fc7aa40d03877c0d31a176",
+    "references/source-quality.md": "82ebd13ae700e292402bdb1fc270316b758b2f329469f4299b7a1cedd637f0b2",
+    "references/semantic-strength.md": "abc0040b2f2083516ea70eaa5f3c6f00cdd89dc08007a771d48cb2d5ac9d6b55",
+    "references/social-renderer.md": "236bb082087312c20e60b12a256400a62bab3c8dbf0c52be8f8d6daccf51b703",
+    "references/failure-modes.md": "f4a3045a5d96f2e4160eab42d3b716ec3592c33d138fa574a1ad0b605ea23e49"
+  },
+  "installed_path": "/workspace/scratch/6af7b35d1457/host-smoke/.agents/skills/evidence-insight",
+  "installed_sha256": {
+    "SKILL.md": "d0e850a0e4ce3c9e7a27e666c053bf9cae497c20fa3b4a7690d9918019721812",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "references/security-boundary.md": "c19f1b711d8b88036beb038fb4032d58772d8fd6b3352151adaf162bce429e62",
+    "references/qualified-evidence-pool.md": "7b1f572bbbae13091e7fae4003c8feb20294b105f93f2aefe33779bcee4a818f",
+    "references/analysis-renderer.md": "a953be354f29f504618072b72b3f222bce61e0b5b8fe2528da8678bf94dba3ae",
+    "references/research-engine.md": "72b7ca6a1a0e5ecfc39216de7a446a4cb546e8fc1b3e136e76ca0d57de74ec26",
+    "references/multi-source-intake.md": "845096e5443ed7668af10285fb8f8dd24c7bca2c1ac17114c42de3aa68b6166a",
+    "references/evidence-applicability.md": "f728db52f7bf4ce079637ca70f383a0950016a3a34fc7aa40d03877c0d31a176",
+    "references/source-quality.md": "82ebd13ae700e292402bdb1fc270316b758b2f329469f4299b7a1cedd637f0b2",
+    "references/semantic-strength.md": "abc0040b2f2083516ea70eaa5f3c6f00cdd89dc08007a771d48cb2d5ac9d6b55",
+    "references/social-renderer.md": "236bb082087312c20e60b12a256400a62bab3c8dbf0c52be8f8d6daccf51b703",
+    "references/failure-modes.md": "f4a3045a5d96f2e4160eab42d3b716ec3592c33d138fa574a1ad0b605ea23e49"
+  },
+  "bundle_source_sha256": {
+    "SKILL.md": "d0e850a0e4ce3c9e7a27e666c053bf9cae497c20fa3b4a7690d9918019721812",
+    "references/multi-source-intake.md": "845096e5443ed7668af10285fb8f8dd24c7bca2c1ac17114c42de3aa68b6166a",
+    "references/research-engine.md": "72b7ca6a1a0e5ecfc39216de7a446a4cb546e8fc1b3e136e76ca0d57de74ec26",
+    "references/source-quality.md": "82ebd13ae700e292402bdb1fc270316b758b2f329469f4299b7a1cedd637f0b2",
+    "references/evidence-applicability.md": "f728db52f7bf4ce079637ca70f383a0950016a3a34fc7aa40d03877c0d31a176",
+    "references/qualified-evidence-pool.md": "7b1f572bbbae13091e7fae4003c8feb20294b105f93f2aefe33779bcee4a818f",
+    "references/analysis-renderer.md": "a953be354f29f504618072b72b3f222bce61e0b5b8fe2528da8678bf94dba3ae",
+    "references/social-renderer.md": "236bb082087312c20e60b12a256400a62bab3c8dbf0c52be8f8d6daccf51b703",
+    "references/semantic-strength.md": "abc0040b2f2083516ea70eaa5f3c6f00cdd89dc08007a771d48cb2d5ac9d6b55",
+    "references/failure-modes.md": "f4a3045a5d96f2e4160eab42d3b716ec3592c33d138fa574a1ad0b605ea23e49",
+    "references/security-boundary.md": "c19f1b711d8b88036beb038fb4032d58772d8fd6b3352151adaf162bce429e62"
+  },
+  "bundle_sha256": "638ece594e9c6aba7e8c43434a8854a7e230b89b637ebb835ca7300692924d29",
+  "runtime_identity_sha256": "ccc904e9e4c2490f07a0d71008ef02ec6315c3dd847959e00f82facc58e5ce55",
+  "status": "VERIFIED byte identity and bundle source coverage; host behavior UNVERIFIED"
+}

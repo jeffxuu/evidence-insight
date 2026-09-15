@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R12",
+  "split": "regression",
+  "category": "study-coverage",
+  "title": "Already tested control",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "批判性分析研究还有什么局限；只用材料。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R12.txt",
+      "sha256": "f34659b875a8b60fa5274863e5bfe1d04f7283d2bb58bcd7947bfd358bffc928"
+    }
+  ],
+  "expected_boundaries": [
+    "Do not claim age/income/education or urban/rural heterogeneity were ignored.",
+    "Existing controls alone do not establish causality."
+  ],
+  "hard_metrics": [
+    "factual_fabrication",
+    "causal_overclaim"
+  ],
+  "required_references": [
+    "research-engine.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

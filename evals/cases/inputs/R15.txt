@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic codebook: amount is cents, -1 denotes missing. Rows: 100, 250, -1. No image is supplied.

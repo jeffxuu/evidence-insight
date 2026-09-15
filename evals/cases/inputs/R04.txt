@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic cross-sectional sample: teams with more training hours have higher output. Managers selected which teams received training. No randomization, longitudinal control or causal identification is supplied.

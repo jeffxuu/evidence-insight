@@ -1,0 +1,3 @@
+Synthetic fixture — no claim about real people or institutions.
+
+Synthetic inventory series: 2023=100 units, 2024=80 units, 2025=60 units. The last stock remains positive. No later data are supplied.

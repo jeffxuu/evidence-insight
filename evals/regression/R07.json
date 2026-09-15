@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R07",
+  "split": "regression",
+  "category": "qualifier-compression",
+  "title": "A narrow modeled estimate",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析后给一段尽量短的文案；如果压缩会改变含义，可以加长。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R07.txt",
+      "sha256": "8c40e07ab645cb144047e4af4f90c88e4f1749786839e85efa6fde1acee2ad51"
+    }
+  ],
+  "expected_boundaries": [
+    "Keep material population/year/model/association qualifiers.",
+    "Do not change percentage points to percent.",
+    "Length may increase to preserve meaning."
+  ],
+  "hard_metrics": [
+    "qualifier_loss",
+    "causal_overclaim",
+    "semantic_strength_violation"
+  ],
+  "required_references": [
+    "semantic-strength.md",
+    "social-renderer.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

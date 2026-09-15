@@ -1,0 +1,128 @@
+{
+  "command": [
+    "/opt/codex/bin/codex",
+    "doctor",
+    "--json"
+  ],
+  "exit_code": 1,
+  "overall_fail_reason": "terminal.env: TERM unsuitable for interactive rendering; not a model failure",
+  "checks": {
+    "auth.credentials": {
+      "id": "auth.credentials",
+      "category": "auth",
+      "status": "ok",
+      "summary": "auth is configured",
+      "details": {
+        "auth file": "/root/.codex/auth.json",
+        "auth storage mode": "File",
+        "stored API key": "false",
+        "stored ChatGPT tokens": "true",
+        "stored agent identity": "false",
+        "stored auth mode": "chatgpt"
+      },
+      "remediation": null,
+      "durationMs": 0
+    },
+    "config.load": {
+      "id": "config.load",
+      "category": "config",
+      "status": "ok",
+      "summary": "config loaded",
+      "details": {
+        "CODEX_HOME": "/root/.codex",
+        "config.toml": "/root/.codex/config.toml",
+        "config.toml parse": "ok",
+        "enabled feature flags": "shell_tool, view_image, sleep_tool, unified_exec, unified_exec_zsh_fork, shell_snapshot, content_item_kinds, code_mode_host, terminal_resize_reflow, sqlite, local_thread_store_compression, hooks, unbounded_connection_retries, multi_agent, apps, tool_search_always_defer_mcp_tools, tool_suggest, plugins, in_app_browser, in_app_chat, in_app_dictation, in_app_local_automation, in_app_updates, browser_use, browser_use_full_cdp_access, browser_use_external, computer_use, remote_plugin, plugin_sharing, image_generation, resize_all_images, item_ids, skill_mcp_dependency_install, skill_search, mentions_v2, steer, guardian_approval, collaboration_modes, tool_call_mcp_elicitation, auth_elicitation, personality, fast_mode, tui_app_server, remote_compaction_v2, compaction_image_budget, workspace_dependencies",
+        "feature flag overrides": "local_thread_store_compression=true, enable_request_compression=false, goals=false",
+        "feature flags enabled": "46",
+        "legacy feature flag": "imagegenext -> image_generation",
+        "log dir": "/root/.codex/log",
+        "mcp servers": "1",
+        "model": "<default>",
+        "model provider": "openai",
+        "sqlite home": "/root/.codex"
+      },
+      "remediation": null,
+      "durationMs": 1
+    },
+    "mcp.config": {
+      "id": "mcp.config",
+      "category": "mcp",
+      "status": "warning",
+      "summary": "MCP configuration has optional issues",
+      "details": {
+        "configured servers": "1",
+        "optional reachability failed": "node_repl: HEAD and GET timed out"
+      },
+      "remediation": "Set the missing MCP env vars or disable the affected server.",
+      "durationMs": 6147
+    },
+    "network.provider_reachability": {
+      "id": "network.provider_reachability",
+      "category": "reachability",
+      "status": "warning",
+      "summary": "provider endpoint checks returned warnings",
+      "details": {
+        "reachability mode": "ChatGPT auth",
+        "inference probe status": "HTTP 405",
+        "route probe status": "HTTP 400"
+      },
+      "remediation": "Check proxy, VPN, firewall, DNS, and custom CA configuration.",
+      "durationMs": 680
+    },
+    "network.websocket_reachability": {
+      "id": "network.websocket_reachability",
+      "category": "websocket",
+      "status": "ok",
+      "summary": "Responses WebSocket handshake succeeded",
+      "details": {
+        "DNS": "lookup failed (failed to lookup address information: Try again)",
+        "auth mode": "chatgpt",
+        "connect timeout": "15000 ms",
+        "handshake result": "HTTP 101 Switching Protocols",
+        "model provider": "openai",
+        "provider name": "OpenAI",
+        "proxy env vars present": "HTTP_PROXY, HTTPS_PROXY, ALL_PROXY, NO_PROXY, http_proxy, https_proxy, all_proxy, no_proxy",
+        "reasoning header": "false",
+        "server model present": "false",
+        "supports websockets": "true",
+        "wire API": "responses"
+      },
+      "remediation": null,
+      "durationMs": 6313
+    },
+    "installation": {
+      "id": "installation",
+      "category": "install",
+      "status": "ok",
+      "summary": "installation looks consistent",
+      "details": {
+        "current executable": "/opt/codex/bin/codex",
+        "install context": "other (package /opt/codex, bin /opt/codex/bin, resources /opt/codex/codex-resources, path /opt/codex/codex-path)",
+        "managed by Vite+": "false",
+        "managed by bun": "false",
+        "managed by npm": "false",
+        "managed by pnpm": "false",
+        "managed package root": "not set"
+      },
+      "remediation": null,
+      "durationMs": 0
+    },
+    "runtime.provenance": {
+      "id": "runtime.provenance",
+      "category": "runtime",
+      "status": "ok",
+      "summary": "running local build on linux-x86_64",
+      "details": {
+        "commit": "unknown",
+        "current executable": "/opt/codex/bin/codex",
+        "install method": "other (package /opt/codex, bin /opt/codex/bin, resources /opt/codex/codex-resources, path /opt/codex/codex-path)",
+        "platform": "linux-x86_64",
+        "version": "0.154.0-alpha.3"
+      },
+      "remediation": null,
+      "durationMs": 0
+    }
+  },
+  "redaction_note": "Selected non-secret checks only; omitted general environment values, endpoint details and unrelated state."
+}

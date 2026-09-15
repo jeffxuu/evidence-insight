@@ -1,0 +1,57 @@
+Collecting skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref (from -r requirements-dev.txt (line 4))
+  Cloning https://github.com/agentskills/agentskills.git (to revision 69ef37e9424c0a7ea9dd2293b559e43ec8176379) to /tmp/pip-install-3muua4s8/skills-ref_5e452290fe7d405982f9e48ebb36b7fa
+  Resolved https://github.com/agentskills/agentskills.git to commit 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting PyYAML==6.0.3 (from -r requirements-dev.txt (line 1))
+  Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting jsonschema==4.26.0 (from -r requirements-dev.txt (line 2))
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting markdown-it-py==4.0.0 (from -r requirements-dev.txt (line 3))
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting attrs>=22.2.0 (from jsonschema==4.26.0->-r requirements-dev.txt (line 2))
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.26.0->-r requirements-dev.txt (line 2))
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema==4.26.0->-r requirements-dev.txt (line 2))
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema==4.26.0->-r requirements-dev.txt (line 2))
+  Downloading rpds_py-2026.6.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting mdurl~=0.1 (from markdown-it-py==4.0.0->-r requirements-dev.txt (line 3))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.0 (from skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4))
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting strictyaml>=1.7.3 (from skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4))
+  Downloading strictyaml-1.7.3-py3-none-any.whl.metadata (11 kB)
+Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.26.0->-r requirements-dev.txt (line 2))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting python-dateutil>=2.6.0 (from strictyaml>=1.7.3->skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.6.0->strictyaml>=1.7.3->skills-ref@ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref->-r requirements-dev.txt (line 4))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 10.7 MB/s eta 0:00:00
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-2026.6.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (366 kB)
+Downloading strictyaml-1.7.3-py3-none-any.whl (123 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Building wheels for collected packages: skills-ref
+  Building wheel for skills-ref (pyproject.toml): started
+  Building wheel for skills-ref (pyproject.toml): finished with status 'done'
+  Created wheel for skills-ref: filename=skills_ref-0.1.0-py3-none-any.whl size=12632 sha256=0f7eb8f9dc5099c1f253e5701fbed1d30f3bdf31ef78c55a17b7e5b7ada90427
+  Stored in directory: /root/.cache/pip/wheels/c4/55/20/48fd419fa4886ea69981eef78e149b93881e42697f04a67881
+Successfully built skills-ref
+Installing collected packages: typing-extensions, six, rpds-py, PyYAML, mdurl, click, attrs, referencing, python-dateutil, markdown-it-py, strictyaml, jsonschema-specifications, skills-ref, jsonschema
+Successfully installed PyYAML-6.0.3 attrs-26.1.0 click-8.5.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 markdown-it-py-4.0.0 mdurl-0.1.2 python-dateutil-2.9.0.post0 referencing-0.37.0 rpds-py-2026.6.3 six-1.17.0 skills-ref-0.1.0 strictyaml-1.7.3 typing-extensions-4.16.0

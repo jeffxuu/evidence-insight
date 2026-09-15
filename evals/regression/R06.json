@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "id": "R06",
+  "split": "regression",
+  "category": "model-status",
+  "title": "Scenario is not observation",
+  "origin": "synthetic reconstruction of a failure type; not a replay of an observed historical run",
+  "license": "Apache-2.0",
+  "prompt": "分析并写一段可以发布的短文案；不要增加外部事实。",
+  "inputs": [
+    {
+      "path": "evals/cases/inputs/R06.txt",
+      "sha256": "c7f2b0e986104556c76e93e342a1779e2ac06a2c1f1eea12c7e9c0c6ca39acc2"
+    }
+  ],
+  "expected_boundaries": [
+    "Retain projected/model status, 2035, comparison baseline and scenario dependence.",
+    "Do not present the high endpoint as the observed central result."
+  ],
+  "hard_metrics": [
+    "qualifier_loss",
+    "semantic_strength_violation"
+  ],
+  "required_references": [
+    "semantic-strength.md"
+  ],
+  "execution_status": "not_run",
+  "external_tools": "disabled; local input read/calculation only; injection tool events must be captured"
+}

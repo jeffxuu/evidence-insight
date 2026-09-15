@@ -1,0 +1,8 @@
+COMMAND: /workspace/scratch/6af7b35d1457/evidence-insight/../verification-venv/bin/python scripts/validate.py --skill-only /workspace/scratch/6af7b35d1457/remote-install-candidate-fixed/.agents/skills/evidence-insight
+{
+  "official_spec": "VERIFIED",
+  "runtime_references": 10,
+  "entrypoint_lines": 308,
+  "behavior": "UNVERIFIED"
+}
+EXIT STATUS: 0

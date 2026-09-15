@@ -1,0 +1,16 @@
+{
+  "first_control": "control-A",
+  "failure_layer": "temporary override config parsing before any model event",
+  "error": "Error loading config.toml: invalid transport in mcp_servers.\"node_repl\"",
+  "correction": "Remove quotes around simple server name in CLI dotted override; do not change global config",
+  "read_only_validation_command": [
+    "/opt/codex/bin/codex",
+    "-c",
+    "mcp_servers.node_repl.enabled=false",
+    "features",
+    "list"
+  ],
+  "validation_exit_code": 0,
+  "next_control": "A-corrected",
+  "not_a_model_authentication_failure": true
+}

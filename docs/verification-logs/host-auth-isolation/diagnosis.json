@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-15T15:36:23.686495+00:00",
+  "authoritative_head": "fa6e76d21fea9354ebbc6cb67a44ee2d146f2e4a",
+  "host_auth": "HOST-AUTH VERIFIED",
+  "astra_access": "ASTRA ACCESS VERIFIED",
+  "verification_scope": "Existing ChatGPT auth route and requested Astra endpoint returned exact bare-control responses; underlying served model version not exposed. Not a claim about every account/model/host.",
+  "plugin_mcp_causality": "non-causal for observed bare-response completion; UNKNOWN for historical R04 and for tool-dependent tasks",
+  "evidence_insight": "not tested in this phase",
+  "control_B": "NOT RUN: corrected Control A passed; Sol merely appeared in host catalog",
+  "reauthentication": "NOT NEEDED/NOT PERFORMED; existing auth route succeeded; no API key fallback",
+  "global_config": "UNCHANGED: before/after SHA-256 equal for all controls",
+  "config_correction": "Initial temporary quoted dotted key was rejected before inference; corrected syntax passed. Original failure retained.",
+  "remaining_limits": [
+    "R04 historical root cause not conclusively isolated; it ignored normal user routing configuration and differed on other startup settings.",
+    "Configured node_repl MCP could not start because NODE_REPL_AUTH_TOKEN was absent; no secret value inspected or supplied.",
+    "Plugin-service 401 is real but coexists with successful model output.",
+    "Account/workspace identifier and server model version were not exposed.",
+    "Normal optional services inject plugin skill descriptions; no Evidence Insight skill, fixture or repository instructions were supplied.",
+    "Managed host base instructions remain; bare control is not an empty system prompt.",
+    "No R05, reference-read test, migration regression, security regression, A/B or holdout execution."
+  ],
+  "next_exact_action": "Wait for explicit 继续 R05 before a traced Evidence Insight preflight; preserve supported routing/auth and verify an observable file-read tool path in that authorized stage."
+}
