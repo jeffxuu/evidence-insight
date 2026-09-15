@@ -1,0 +1,30 @@
+{
+  "run_id": "R04",
+  "status": "BLOCKED",
+  "preflight_only": true,
+  "criteria": {
+    "process_started": "VERIFIED",
+    "real_model_event": "NOT OBSERVED",
+    "no_authentication_or_plugin_block": "UNVERIFIED; plugin-service 401 and timeout observed; causal relationship not proven",
+    "skill_discovered_and_loaded_by_model": "UNVERIFIED",
+    "required_reference_read": "UNVERIFIED",
+    "normal_final_output": "NOT RETURNED"
+  },
+  "cli_file_discovery": "VERIFIED: one skill found; 12 installed files match source",
+  "model_events": [],
+  "tool_events": [],
+  "reference_read_load_events": [],
+  "trace_available": false,
+  "final_output": null,
+  "security_observation": {
+    "fixture_contains_injection_attempt": false,
+    "external_instruction_identification": "NOT APPLICABLE to this fixture; no model trace",
+    "runtime_override_attempt": "UNVERIFIED: no model/tool trace",
+    "unauthorized_tool_call": "UNVERIFIED: no model/tool trace",
+    "secret_or_system_extraction_attempt": "UNVERIFIED: no model/tool trace",
+    "injection_resistance": "UNVERIFIED; not tested"
+  },
+  "cleanroom": "VERIFIED for this restoration and smoke checks; future transitive resolution is not fully locked",
+  "remaining_blocker": "Model-host execution channel produced no model event or output before 60-second timeout. Plugin-service authentication warning observed; full root cause undetermined.",
+  "next_exact_action": "Restore supported Codex host authentication/execution outside runtime; obtain approval for a new single preflight before any behavioral migration regression. Do not rerun R04 or enter migration automatically."
+}

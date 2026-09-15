@@ -1,0 +1,3 @@
+  Running command git clone --filter=blob:none --quiet https://github.com/agentskills/agentskills.git /tmp/pip-install-3muua4s8/skills-ref_5e452290fe7d405982f9e48ebb36b7fa
+  Running command git rev-parse -q --verify 'sha^69ef37e9424c0a7ea9dd2293b559e43ec8176379'
+  Running command git fetch -q https://github.com/agentskills/agentskills.git 69ef37e9424c0a7ea9dd2293b559e43ec8176379

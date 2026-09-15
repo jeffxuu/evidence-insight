@@ -1,6 +1,6 @@
 # Evidence Insight project state
 
-Updated: 2026-09-14 UTC. Public version: **1.0.0**.
+Updated: 2026-09-15 UTC. Public version: **1.0.0**.
 This management document is not a runtime dependency.
 
 ## Current goal and phase
@@ -10,7 +10,36 @@ was created from **oss/v1.0.0 → main**. It is open and unmerged. No tag or Rel
 The broader goal remains a portable, installable, maintainable skill with explicit evidence and safety limits.
 Behavioral release gates remain open; this is not a benchmark-validated release.
 
-## Last verified state
+## R04 stop gate (2026-09-15 UTC)
+
+Current phase: clean-room recovery completed; **R04 execution preflight BLOCKED**. No behavioral migration,
+security regression, vanilla A/B or holdout run followed it. The earlier recovery sections below are historical.
+
+- **VERIFIED:** PR #1 and remote oss/v1.0.0 both matched the authorized head
+  `5085a9504574933d00132cb87a8a4e04311bcee9`; four latest CI runs and all job steps were successful.
+  A fresh remote clone checked out that exact head with a clean worktree. The old local checkout was retained.
+- **VERIFIED:** A new isolated environment restored the pinned direct dependencies and validator commit.
+  Official validation, repository validation and 16 engineering tests passed again, **0 failed**.
+  Static migration coverage remains 2,026 nonblank source lines; this is not behavioral equivalence.
+  CLI discovery found one skill, installed 12 files, and every installed SHA-256 matched source before and after R04.
+- **PARTIALLY VERIFIED:** Repeatability beyond this restoration: direct dependencies are pinned but the repository
+  has no complete transitive lock. Actual resolved versions are retained. Existing material/privacy limits remain.
+- **UNVERIFIED:** Model-side skill discovery/loading, required-reference reads, effective model/version/effort,
+  effective tool availability and trust-boundary behavior. Installation evidence cannot establish model loading.
+- **BLOCKED:** R04 started a Codex process at 09:32:47 UTC and timed out at 09:33:47 UTC, normalized exit 124
+  (process return code -15). Stdout is empty: zero model/tool/reference events and no final output.
+  Stderr contains a new plugin-service 401 warning. Its causal relationship to the stalled model execution is undetermined.
+
+R04 is a run identifier. It uses the existing R03 boundary-evidence fixture, unchanged; it is not a scored R03 run.
+The fixture requires evidence-applicability.md; the dual-output task also activates the shared and renderer references.
+No injected instruction was supplied; no security pass is claimed. No credentials were inspected or changed.
+Runtime, references, adapter, manifest, fixtures, version and repository architecture remain frozen.
+Only status documents and execution evidence are changed by this continuation; PR #1 stays draft and unmerged.
+
+See the [R04 verification record](docs/verification.md#r04-clean-room-and-model-preflight-2026-09-15-utc),
+[attempt](docs/verification-logs/R04/model/attempt.json) and [observations](docs/verification-logs/R04/observations.json).
+
+## Earlier verified state
 
 - Official Agent Skills validator, public version/adapter synchronization and internal reference integrity passed.
 - Migration accounts for **2,026 nonblank source lines**, with unchanged owner-upload snapshots and explicit reference loading conditions.
@@ -62,7 +91,7 @@ The earlier qualifier-preservation description was corrected; benchmark status r
 
 | Status | Remaining scope |
 | --- | --- |
-| BLOCKED | Current local execution environment and fresh model preflight are unavailable. Last model-host preflight: timeout after 45 seconds, exit 124, zero model events, plugin-service 401. Effective model/version is unobserved. |
+| BLOCKED | Clean-room engineering recovery succeeded. New R04 model preflight timed out after 60 seconds, exit 124, zero model events; plugin-service 401 observed. Effective model/version remains unobserved. |
 | BLOCKED | Internal-to-public migration behavioral comparison; vanilla A/B must follow it. Neither was executed. |
 | BLOCKED | Actual paired model demos and evidence of runtime reference reads or injection behavior. |
 | UNVERIFIED | Ten complete independently sealed holdout cases. Public blueprints are not unseen inputs. |
@@ -82,7 +111,8 @@ Do not merge, tag or create a Release automatically. Keep any further release ch
 
 ## Next exact action
 
-Restore an accessible execution environment, check out the current oss/v1.0.0 head, and verify the checkout,
-locked dependencies and derivative identities. Then run a single bounded independent model-host preflight.
-Only after actual model output and tool/reference traces are available should the frozen internal/public migration
-protocol proceed. Vanilla A/B follows that gate. Independent holdout custody and real paired demos remain separate work.
+Resolve the supported Codex host execution/authentication prerequisite without changing runtime or credentials through
+this skill. The new plugin-service 401 is diagnostic evidence, not proof of the complete root cause.
+After host recovery, obtain explicit authorization for another single traced preflight; do not retry R04 automatically.
+Only a passing preflight and the owner's explicit “继续迁移行为回归” authorize the internal/public behavioral migration stage.
+No merge, tag, Release, ready-for-review transition, benchmark or holdout execution is authorized by this checkpoint.

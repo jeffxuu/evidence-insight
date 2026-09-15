@@ -1,0 +1,33 @@
+
+│
+●   codex  Agent detected — installing non-interactively
+[?25l│
+◇  Source: /workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/repo
+[?25h[?25l│
+◇  Local path validated
+[?25h[?25l│
+◇  Found 1 skill
+[?25h│
+●  Selected 1 skill: evidence-insight
+
+│
+◇  Installation Summary ──────────────╮
+│                                     │
+│  ./.agents/skills/evidence-insight  │
+│    copy → Codex                     │
+│                                     │
+├─────────────────────────────────────╯
+[?25l│
+◇  Installation complete
+[?25h
+│
+◇  Installed 1 skill ─────────────────────╮
+│                                         │
+│  ✓ evidence-insight (copied)            │
+│    → ./.agents/skills/evidence-insight  │
+│                                         │
+├─────────────────────────────────────────╯
+
+│
+└  Done!  Review skills before use; they run with full agent permissions.
+

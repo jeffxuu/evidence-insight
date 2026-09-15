@@ -1,0 +1,3 @@
+Use $evidence-insight for the following task, using only input.txt as evidence. Read the installed Skill and its applicable references in full through the available read tools. Do not browse, install software, upload data, modify files, or read credentials. Do not read evaluation answer files.
+
+研究B是不是推翻了研究A？分析并给一段社交文案；只用材料。

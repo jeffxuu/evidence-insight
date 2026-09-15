@@ -1,0 +1,11 @@
+{
+  "official_spec": "VERIFIED",
+  "runtime_references": 10,
+  "entrypoint_lines": 308,
+  "behavior": "UNVERIFIED",
+  "migration_source_lines": 2026,
+  "markdown_files": 35,
+  "public_regression_cases": 20,
+  "secret_pattern_scan": "VERIFIED (limited patterns; not a complete secrecy guarantee)",
+  "copyright_provenance": "PARTIALLY VERIFIED; see materials review"
+}

@@ -1,6 +1,6 @@
 # Release verification record
 
-Public runtime: **1.0.0**. Review date: **2026-09-13 UTC**.
+Public runtime: **1.0.0**. Latest review: **2026-09-15 UTC**. Earlier dated checks below remain historical.
 
 Statuses describe the specific evidence below, not the project as a whole.
 
@@ -10,6 +10,10 @@ Statuses describe the specific evidence below, not the project as a whole.
 | PARTIALLY VERIFIED | Some components were inspected or run; the remaining scope is explicit |
 | UNVERIFIED | No applicable execution or observation is available |
 | BLOCKED | A concrete missing prerequisite prevents the check from completing |
+
+## Historical release checks (through 2026-09-14 UTC)
+
+These rows retain earlier observations. The dated R04 section below supersedes environment and model-host status.
 
 | Check | Status | Evidence / remaining limit |
 | --- | --- | --- |
@@ -35,6 +39,73 @@ Statuses describe the specific evidence below, not the project as a whole.
 | Secrets | PARTIALLY VERIFIED | Limited patterns found no key/token matches; manual review required; not a universal absence guarantee |
 | skills.sh indexing | UNVERIFIED | No listing confirmed; test installs disable telemetry |
 | Star History | UNVERIFIED | No chart displayed; target endpoint not confirmed usable |
+
+## R04 clean-room and model preflight (2026-09-15 UTC)
+
+**Stop-gate result: BLOCKED.** Clean-room engineering recovery succeeded; independent model execution did not.
+This continuation changed only status documentation and execution evidence. The tested runtime is the exact source at
+`5085a9504574933d00132cb87a8a4e04311bcee9`; no runtime, reference, adapter, manifest or fixture was modified.
+
+| Check | Status | Actual evidence / limit |
+| --- | --- | --- |
+| Authoritative state | VERIFIED | PR and branch equal 5085a95; open Draft PR; main remains 451f227; all four latest CI runs and their job steps succeeded |
+| Clean-room checkout | VERIFIED | Fresh remote clone of oss/v1.0.0; exact HEAD and clean worktree before and after engineering smoke |
+| Dependency restoration | VERIFIED | Fresh isolated environment; fixed direct versions and skills-ref source commit restored without upgrades |
+| Long-term dependency reproducibility | PARTIALLY VERIFIED | Complete transitive lock absent in source; this run's resolved inventory is saved |
+| Engineering smoke | VERIFIED | Official validator, repository validation, pip check, installed skill validation and 16 tests passed; 0 failed |
+| Migration accounting | VERIFIED | 2,026 source lines statically mapped; does not establish behavioral equivalence |
+| CLI discovery / file installation | VERIFIED | One skill discovered; all 12 source and installed files have equal SHA-256 before and after preflight |
+| Actual model process | VERIFIED | Codex process started; ended by SIGTERM at timeout; normalized exit 124, process return code -15 |
+| R04 model-host execution | BLOCKED | 60-second timeout; stdout 0 bytes; stderr 369 bytes; no model event or final output |
+| Skill loading by model | UNVERIFIED | No host discovery/load trace; CLI installation is insufficient evidence |
+| Required-reference loading | UNVERIFIED | No read/load event for evidence-applicability.md or the other required stage references |
+| Authentication / plugin health | PARTIALLY VERIFIED | New plugin-service 401 observed; cannot determine every cause of stalled core execution |
+| External Content Trust Boundary | UNVERIFIED | Fixture contains no injection attempt; no model/tool trace; no security behavior was tested |
+
+Environment: Linux 6.18.44 x86_64 / glibc 2.39; Python 3.12.14; Node 24.19.0; npm 11.9.0;
+skills CLI 1.5.26; skills-ref 0.1.0 at commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`;
+Codex CLI 0.154.0-alpha.3. The GitHub connector successfully read PR/branch/CI state; that does not
+establish model-host authentication. Direct and resolved transitive versions match the retained prior inventory.
+The file-install command targeted the fresh local clone at the authorized head. No new default-main installation claim is made.
+
+R04 used existing fixture [R03](../evals/regression/R03.json), with its original prompt and input bytes.
+Run ID R04 does not mean fixture R04. Requested model: gpt-6-astra; requested reasoning effort: high.
+Effective model/version/effort and actual available tools remain unobserved.
+The run began **2026-09-15T09:32:47.296902+00:00** and ended **2026-09-15T09:33:47.301073+00:00**.
+The host workspace contained the installed skill and input; the task was passed to the process.
+Evaluation expectations were not copied into that workspace. Actual model reads remain unobserved.
+The command requested read-only sandboxing and local reads only. A single attempt ran; no fallback generated output.
+The empty event stream cannot establish absence of unauthorized behavior or successful reference loading.
+There is no final-output artifact because the host did not return one; the observation record stores final_output as null.
+
+| Identity | SHA-256 |
+| --- | --- |
+| R03 fixture JSON | 7ad05df7a690c66ad7910c12aac7a770539952b9bb6ce345a34d8c10c75032d8 |
+| R03 input | 7e07bdc9585269d799cb5f9744c07444ddbdf5dbd0db4597f73a3d58e0f2c882 |
+| SKILL.md | d0e850a0e4ce3c9e7a27e666c053bf9cae497c20fa3b4a7690d9918019721812 |
+| Runtime inventory identity | ccc904e9e4c2490f07a0d71008ef02ec6315c3dd847959e00f82facc58e5ce55 |
+
+Runtime identity hashes the UTF-8 Python `json.dumps(source_hashes, sort_keys=True)` representation
+with default separators; paths are relative to the skill root and the inventory includes LICENSE.
+The full file inventory and reference requirements are retained below.
+
+- [Recovery and CI snapshot](verification-logs/R04/recovery.json), [clone command](verification-logs/R04/clone.json).
+- [Environment versions](verification-logs/R04/environment.json), [dependency restoration](verification-logs/R04/dependencies.json),
+  [install stdout](verification-logs/R04/dependencies.stdout.txt), [install stderr](verification-logs/R04/dependencies.stderr.txt),
+  [resolved dependencies](verification-logs/R04/dependency-snapshot.stdout.txt), [validator provenance](verification-logs/R04/validator-provenance.stdout.txt).
+- [Smoke commands / exit codes](verification-logs/R04/checks.json), [validation](verification-logs/R04/validation.stdout.txt),
+  [16 test results](verification-logs/R04/tests.stderr.txt).
+- [CLI install command](verification-logs/R04/install.json), [discovery output](verification-logs/R04/install.stdout.txt),
+  [source and installed identities](verification-logs/R04/identities.json), [post-run integrity](verification-logs/R04/post-run-integrity.json).
+- [Exact R04 command and timing](verification-logs/R04/model/attempt.json), [prompt](verification-logs/R04/model/prompt.txt),
+  [raw stdout / event stream](verification-logs/R04/model/stdout.jsonl), [raw stderr](verification-logs/R04/model/stderr.txt),
+  [observation and pass-criteria record](verification-logs/R04/observations.json), [single-attempt runner](verification-logs/R04/r04-runner.py).
+
+Remaining blocker: restore a working, observable Codex model execution channel through supported host authentication/setup.
+The plugin-service warning requests signing in again; no credentials were read, printed, changed or bypassed here.
+A new preflight requires authorization after host recovery. R04 is closed and must not be overwritten or silently retried.
+Internal/public behavioral migration, security regression, vanilla A/B and sealed holdout remain unexecuted.
+Only after a passing execution preflight and explicit “继续迁移行为回归” may the migration phase start.
 
 ## Executed local commands
 

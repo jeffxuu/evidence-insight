@@ -1,0 +1,13 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "--single-branch",
+    "--branch",
+    "oss/v1.0.0",
+    "https://github.com/jeffxuu/evidence-insight.git",
+    "/workspace/scratch/6af7b35d1457/r04-cleanroom-20260915/repo"
+  ],
+  "start": "2026-09-15T09:28:48.155456+00:00",
+  "exit_code": 0
+}
