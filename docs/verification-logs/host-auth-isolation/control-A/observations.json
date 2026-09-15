@@ -1,0 +1,15 @@
+{
+  "control": "control-A",
+  "exit_code": 1,
+  "final_match": false,
+  "actual_model_messages": [],
+  "first_model_event_received_at": null,
+  "request_id": null,
+  "request_id_note": "No inference request ID exposed; thread ID is not a request ID.",
+  "tool_events": [],
+  "plugin_service_401": false,
+  "core_model_auth_error_observed": false,
+  "mcp_missing_token_env_name": null,
+  "effective_model_version": null,
+  "global_config_unchanged": true
+}

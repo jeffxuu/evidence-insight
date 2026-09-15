@@ -1,0 +1,12 @@
+Reading additional input from stdin...
+2026-09-15T15:35:13.271237Z  WARN codex_features: unknown feature key in config: experimental_use_rmcp_client
+2026-09-15T15:35:13.479796Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex failed with status 401 Unauthorized: {"detail":"Could not parse your authentication token. Please try signing in again."}
+2026-09-15T15:35:13.530833Z  WARN codex_network_proxy::proxy: allowUnixSockets and dangerouslyAllowAllUnixSockets are macOS-only; requests will be rejected on this platform
+2026-09-15T15:35:13.800623Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="node_repl" error=Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set
+2026-09-15T15:35:13.893482Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json
+2026-09-15T15:35:13.897540Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json
+2026-09-15T15:35:14.136580Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="node_repl" error=Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set
+2026-09-15T15:35:14.683244Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json
+2026-09-15T15:35:14.691283Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json
+2026-09-15T15:35:15.142050Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="node_repl" error=Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set
+2026-09-15T15:35:20.273405Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set

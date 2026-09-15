@@ -10,9 +10,37 @@ was created from **oss/v1.0.0 → main**. It is open and unmerged. No tag or Rel
 The broader goal remains a portable, installable, maintainable skill with explicit evidence and safety limits.
 Behavioral release gates remain open; this is not a benchmark-validated release.
 
-## R04 stop gate (2026-09-15 UTC)
+## Host authentication isolation stop gate (2026-09-15 UTC)
 
-Current phase: clean-room recovery completed; **R04 execution preflight BLOCKED**. No behavioral migration,
+**HOST-AUTH VERIFIED; ASTRA ACCESS VERIFIED**, scoped to the existing ChatGPT-authenticated route and bare requests.
+The corrected bare Astra control and the normal-optional-services control both returned exactly `ASTRA_HOST_OK`, exit 0,
+with actual agent-message events. Server model/version and account/workspace identifier were not exposed.
+The previously retained R04 validation interpreter is absent in this resumed session. Local full repository validation
+could not start; prior 16-test evidence is unchanged. Documentation targets and frozen-file identity were checked with
+standard-library tools; current-commit GitHub Actions provides the full validation gate. No dependency files were changed.
+
+No API-key billing route was substituted. No reauthentication or global configuration change was needed or performed.
+
+The first Control A launch was rejected before inference because the diagnostic CLI override quoted the MCP server name.
+The temporary parameter was corrected after a read-only config-load check; the original failure remains in the evidence.
+It is not counted as a model authentication failure. Control B was not run because corrected Control A passed.
+
+**PLUGIN/MCP STATUS: non-causal for these bare-response completions.** Normal optional services logged the same
+plugin-service 401 and a node_repl startup failure due to absent `NODE_REPL_AUTH_TOKEN`, yet returned the exact answer.
+Optional service health is impaired; tool-dependent task execution remains unverified. Historical R04 causality is UNKNOWN.
+Normal user configuration supplies host-specific model routing that R04's `--ignore-user-config` omitted.
+That is a relevant configuration difference, not a proven sole explanation of R04's timeout.
+
+**EVIDENCE INSIGHT STATUS: not tested in this phase.** No R04 rerun, R05, migration regression, security regression,
+A/B or holdout execution occurred. Previous installation/hash/test evidence remains previous evidence.
+Runtime, references, adapter, manifest, fixtures, dependencies, workflows, README and version remain frozen.
+
+See [host diagnosis](docs/verification.md#host-authentication-isolation-2026-09-15-utc) and
+[diagnostic evidence](docs/verification-logs/host-auth-isolation/diagnosis.json).
+
+## Historical R04 stop gate (2026-09-15 UTC)
+
+Phase at that stop: clean-room recovery completed; **R04 execution preflight BLOCKED**. No behavioral migration,
 security regression, vanilla A/B or holdout run followed it. The earlier recovery sections below are historical.
 
 - **VERIFIED:** PR #1 and remote oss/v1.0.0 both matched the authorized head
@@ -91,7 +119,7 @@ The earlier qualifier-preservation description was corrected; benchmark status r
 
 | Status | Remaining scope |
 | --- | --- |
-| BLOCKED | Clean-room engineering recovery succeeded. New R04 model preflight timed out after 60 seconds, exit 124, zero model events; plugin-service 401 observed. Effective model/version remains unobserved. |
+| VERIFIED | Bare model-host controls now succeed on the existing ChatGPT route with requested Astra. R04 remains a historical blocked run; no Skill execution is inferred. |
 | BLOCKED | Internal-to-public migration behavioral comparison; vanilla A/B must follow it. Neither was executed. |
 | BLOCKED | Actual paired model demos and evidence of runtime reference reads or injection behavior. |
 | UNVERIFIED | Ten complete independently sealed holdout cases. Public blueprints are not unseen inputs. |
@@ -111,8 +139,7 @@ Do not merge, tag or create a Release automatically. Keep any further release ch
 
 ## Next exact action
 
-Resolve the supported Codex host execution/authentication prerequisite without changing runtime or credentials through
-this skill. The new plugin-service 401 is diagnostic evidence, not proof of the complete root cause.
-After host recovery, obtain explicit authorization for another single traced preflight; do not retry R04 automatically.
-Only a passing preflight and the owner's explicit “继续迁移行为回归” authorize the internal/public behavioral migration stage.
-No merge, tag, Release, ready-for-review transition, benchmark or holdout execution is authorized by this checkpoint.
+Wait for the owner's explicit **“继续 R05”** before executing R05, a traced Evidence Insight preflight.
+Preserve the working host routing and authentication; confirm an observable file-read tool path in that authorized stage.
+The node_repl missing-token condition is unresolved, so bare connectivity does not establish tool/reference access.
+Do not retry R04, change runtime, enter migration regression, merge, mark ready, tag or create a Release.

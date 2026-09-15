@@ -1,0 +1,52 @@
+[
+  {
+    "received_at": "2026-09-15T15:34:44.527091+00:00",
+    "stream": "stderr",
+    "line": "Reading additional input from stdin...\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:44.829414+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:34:44.828903Z  WARN codex_features: unknown feature key in config: experimental_use_rmcp_client\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:44.970473+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:34:44.966422Z  WARN codex_network_proxy::proxy: allowUnixSockets and dangerouslyAllowAllUnixSockets are macOS-only; requests will be rejected on this platform\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:45.041062+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"thread.started\",\"thread_id\":\"01a0a5b4-cd72-74d0-8036-effefed0d8df\"}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:45.080881+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_0\",\"type\":\"error\",\"message\":\"`[features].imagegenext` is deprecated. Use `[features].image_generation` instead. (Enable it with `--enable image_generation` or `[features].image_generation` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.)\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:45.082667+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_1\",\"type\":\"error\",\"message\":\"Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /root/.codex/config.toml.\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:45.082713+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_2\",\"type\":\"error\",\"message\":\"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`.\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:45.087922+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"turn.started\"}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:49.036211+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_3\",\"type\":\"agent_message\",\"text\":\"ASTRA_HOST_OK\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:34:49.060310+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"turn.completed\",\"usage\":{\"input_tokens\":8121,\"cached_input_tokens\":0,\"cache_write_input_tokens\":0,\"output_tokens\":8,\"reasoning_output_tokens\":0}}\n"
+  }
+]

@@ -11,9 +11,94 @@ Statuses describe the specific evidence below, not the project as a whole.
 | UNVERIFIED | No applicable execution or observation is available |
 | BLOCKED | A concrete missing prerequisite prevents the check from completing |
 
+## Host authentication isolation (2026-09-15 UTC)
+
+**HOST-AUTH VERIFIED. ASTRA ACCESS VERIFIED. Evidence Insight was not tested.**
+These labels mean that real responses were returned through the existing ChatGPT authentication route for the requested
+Astra model. They do not certify every model, account entitlement, workspace or future task. Server model/version was not exposed.
+Source recovery matched `fa6e76d21fea9354ebbc6cb67a44ee2d146f2e4a`; PR #1 remained draft and its four latest CI runs succeeded.
+
+| Layer | Status | Evidence |
+| --- | --- | --- |
+| Codex process startup | VERIFIED | CLI 0.154.0-alpha.3; corrected bare and normal-services controls both exited 0 |
+| Authentication | HOST-AUTH VERIFIED | Supported login status reported ChatGPT; doctor reported configured ChatGPT credentials and no stored API key; real responses succeeded through the unchanged route |
+| General model request | VERIFIED for tested route | Actual agent-message and turn-completed events; no inference authentication error; no alternate-model inference was needed |
+| Astra model access | ASTRA ACCESS VERIFIED | Both successful controls requested gpt-6-astra, low effort, and returned exactly ASTRA_HOST_OK; underlying served version unexposed |
+| Workspace/account entitlement | PARTIALLY VERIFIED | Effective context permitted these requests; account/workspace identifier and wider entitlements were not exposed |
+| Host configuration | PARTIALLY VERIFIED | Normal routing works with per-process overrides; stale/unknown optional settings warn without preventing output; R04 ignored normal user routing |
+| Plugin/MCP services | non-causal for bare output; service health impaired | Normal-services control logged plugin-service 401 and missing NODE_REPL_AUTH_TOKEN yet returned the expected answer |
+| Other startup dependencies | PARTIALLY VERIFIED | Bare startup completes despite nonfatal configuration/code-mode warnings; no blanket validation of all tool dependencies |
+| Skill discovery | previous evidence only | R04 file installation found one skill and matched 12 files; not retested here |
+| Skill model loading | not tested | No Evidence Insight skill or fixture supplied |
+| Reference loading | not tested | No file-reading task or tool call occurred |
+
+### Authentication and configuration inventory
+
+[Inventory](verification-logs/host-auth-isolation/inventory.json) contains environment variable names only,
+configuration paths/key presence and non-secret classifications. The credential file's existence/type was observed via
+supported CLI status/doctor; its contents were not printed or manually read. No access/refresh token, API key, cookie,
+auth artifact or credential-store contents were committed. No account/workspace identifier was exposed, so none was invented.
+No profile was selected. Model provider is openai, authentication mode ChatGPT. Managed requirements and proxy remain active.
+Normal config includes openai_base_url and chatgpt_base_url. R04 used --ignore-user-config; this diagnostic retains both routes.
+No global config was edited; before/after hashes match. No API-key fallback, login/logout or account change was performed.
+
+The host catalog advertised gpt-6-astra and gpt-5.6-sol with low as the lowest listed effort. Catalog visibility alone does not
+prove entitlement; actual Astra inference establishes only the tested access. Control B was correctly skipped after Astra passed.
+Doctor reported config parsing success and a successful WebSocket handshake. Its overall exit 1 was due to terminal rendering
+configuration, not a failed model request. Legacy imagegenext, unknown experimental_use_rmcp_client and other optional
+settings generated warnings; no permanent cleanup was attempted. The disabled code-mode host also emitted a fail-closed
+warning during the bare control, yet the model returned normally without tools.
+
+### Controls and observed events
+
+| Control | Start / end UTC | Result | First actual model response received UTC |
+| --- | --- | --- | --- |
+| A initial setup | 15:34:03.001219 / 15:34:03.121438 | Exit 1 before inference: invalid transport for quoted temporary MCP override | None |
+| A corrected, optional services disabled | 15:34:44.176899 / 15:34:57.605862 | Exit 0; exact ASTRA_HOST_OK; no plugin 401 | 15:34:49.036211 |
+| Normal optional services | 15:35:12.521224 / 15:35:28.742434 | Exit 0; exact ASTRA_HOST_OK; plugin 401 and MCP startup warnings | 15:35:20.210282 |
+
+The setup error came from the diagnostic command's quoted dotted key, not repository code or model authentication.
+A read-only config-loading command accepted the corrected MCP override. Both commands and the original failure are retained.
+Each process had a 60-second cap. No timed-out process or hidden retry produced the successful output.
+Event timestamps are local receipt timestamps, not claimed server timestamps. No inference request ID was exposed;
+thread IDs were not relabeled as request IDs. Exact commands, stdout, stderr and final text are linked below.
+
+Bare control used an empty temporary directory, no repository instructions, no fixture, no Evidence Insight,
+no web and no tool calls. Local skill entries and optional services were disabled with per-process config overrides.
+Managed host/base instructions still exist; this is not an empty system prompt. The normal-services comparison retained
+plugin metadata, which caused a skill-description-budget warning; no Evidence Insight loading is inferred from that catalog.
+Both runs used the same authentication route, environment and model/effort, with separate empty temporary working directories.
+
+The previously retained R04 validation interpreter is absent in this resumed session. Local full repository validation
+could not start; prior 16-test evidence is unchanged. Documentation targets and frozen-file identity were checked with
+standard-library tools; current-commit GitHub Actions provides the full validation gate. No dependency files were changed.
+
+### Interpretation and stop gate
+
+The plugin-service 401 is **non-causal for failure to return these bare responses**: it occurred while the normal-services
+request succeeded. It remains a real optional-service failure. The node_repl MCP also failed to start because its named
+authentication environment variable was absent. This was observed without reading, printing or supplying any token value.
+Neither warning establishes that reference-reading tools will work; their operational readiness remains unverified.
+The causal role of the 401 in historical R04 is still UNKNOWN. Differences in route preservation and startup configuration
+prevent attributing R04's timeout to a single setting. R04's result and evidence were not changed.
+
+Stop reached: bare Astra succeeds, including with normal optional-service warnings. No reauthentication is required to
+prove this already working route. No Control B, R05, behavioral migration, security regression, A/B or holdout was run.
+Next exact action is to wait for **“继续 R05”**, then perform only the authorized traced Skill preflight with observable reads.
+No merge, ready-for-review transition, tag or Release was performed.
+
+- [Non-secret inventory](verification-logs/host-auth-isolation/inventory.json), [selected doctor checks](verification-logs/host-auth-isolation/doctor-selected.json),
+  [catalog metadata](verification-logs/host-auth-isolation/catalog-selected.json), [configuration correction](verification-logs/host-auth-isolation/configuration-correction.json).
+- [Initial setup failure](verification-logs/host-auth-isolation/control-A/attempt.json), [stderr](verification-logs/host-auth-isolation/control-A/stderr.txt).
+- [Bare Astra attempt](verification-logs/host-auth-isolation/control-A-corrected/attempt.json), [stdout](verification-logs/host-auth-isolation/control-A-corrected/stdout.jsonl),
+  [stderr](verification-logs/host-auth-isolation/control-A-corrected/stderr.txt), [observations](verification-logs/host-auth-isolation/control-A-corrected/observations.json).
+- [Normal-services attempt](verification-logs/host-auth-isolation/control-services/attempt.json), [stdout](verification-logs/host-auth-isolation/control-services/stdout.jsonl),
+  [stderr](verification-logs/host-auth-isolation/control-services/stderr.txt), [observations](verification-logs/host-auth-isolation/control-services/observations.json).
+- [Decision record](verification-logs/host-auth-isolation/diagnosis.json), [single-control runner](verification-logs/host-auth-isolation/control.py).
+
 ## Historical release checks (through 2026-09-14 UTC)
 
-These rows retain earlier observations. The dated R04 section below supersedes environment and model-host status.
+These rows retain earlier observations. The dated host-isolation section above supersedes current model-host status; R04 remains historical evidence.
 
 | Check | Status | Evidence / remaining limit |
 | --- | --- | --- |
@@ -42,7 +127,7 @@ These rows retain earlier observations. The dated R04 section below supersedes e
 
 ## R04 clean-room and model preflight (2026-09-15 UTC)
 
-**Stop-gate result: BLOCKED.** Clean-room engineering recovery succeeded; independent model execution did not.
+**Historical R04 stop-gate result: BLOCKED.** Clean-room engineering recovery succeeded; independent model execution did not in that run.
 This continuation changed only status documentation and execution evidence. The tested runtime is the exact source at
 `5085a9504574933d00132cb87a8a4e04311bcee9`; no runtime, reference, adapter, manifest or fixture was modified.
 

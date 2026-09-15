@@ -1,0 +1,20 @@
+{
+  "control": "control-services",
+  "exit_code": 0,
+  "final_match": true,
+  "actual_model_messages": [
+    {
+      "received_at": "2026-09-15T15:35:20.210282+00:00",
+      "text": "ASTRA_HOST_OK"
+    }
+  ],
+  "first_model_event_received_at": "2026-09-15T15:35:20.210282+00:00",
+  "request_id": null,
+  "request_id_note": "No inference request ID exposed; thread ID is not a request ID.",
+  "tool_events": [],
+  "plugin_service_401": true,
+  "core_model_auth_error_observed": false,
+  "mcp_missing_token_env_name": "NODE_REPL_AUTH_TOKEN",
+  "effective_model_version": null,
+  "global_config_unchanged": true
+}

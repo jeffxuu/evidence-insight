@@ -1,0 +1,97 @@
+[
+  {
+    "received_at": "2026-09-15T15:35:12.845518+00:00",
+    "stream": "stderr",
+    "line": "Reading additional input from stdin...\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:13.272028+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:13.271237Z  WARN codex_features: unknown feature key in config: experimental_use_rmcp_client\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:13.481558+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:13.479796Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex failed with status 401 Unauthorized: {\"detail\":\"Could not parse your authentication token. Please try signing in again.\"}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:13.531052+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:13.530833Z  WARN codex_network_proxy::proxy: allowUnixSockets and dangerouslyAllowAllUnixSockets are macOS-only; requests will be rejected on this platform\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:13.800846+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:13.800623Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name=\"node_repl\" error=Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:13.893663+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:13.893482Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:13.897628+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:13.897540Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:14.136716+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:14.136580Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name=\"node_repl\" error=Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:14.150584+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"thread.started\",\"thread_id\":\"01a0a5b5-3c96-7d51-987a-b9cc973af3df\"}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:14.683396+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:14.683244Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:14.691390+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:14.691283Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=file:///root/.codex/plugins/cache/openai-curated-remote/demos/0.1.22/.codex-plugin/plugin.json\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:15.136184+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_0\",\"type\":\"error\",\"message\":\"`[features].imagegenext` is deprecated. Use `[features].image_generation` instead. (Enable it with `--enable image_generation` or `[features].image_generation` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.)\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:15.136301+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_1\",\"type\":\"error\",\"message\":\"Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /root/.codex/config.toml.\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:15.139977+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"turn.started\"}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:15.142413+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:15.142050Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name=\"node_repl\" error=Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:17.981252+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_2\",\"type\":\"error\",\"message\":\"Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:20.210282+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_3\",\"type\":\"agent_message\",\"text\":\"ASTRA_HOST_OK\"}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:20.250487+00:00",
+    "stream": "stdout",
+    "line": "{\"type\":\"turn.completed\",\"usage\":{\"input_tokens\":17589,\"cached_input_tokens\":0,\"cache_write_input_tokens\":0,\"output_tokens\":8,\"reasoning_output_tokens\":0}}\n"
+  },
+  {
+    "received_at": "2026-09-15T15:35:20.273601+00:00",
+    "stream": "stderr",
+    "line": "2026-09-15T15:35:20.273405Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: Environment variable NODE_REPL_AUTH_TOKEN for MCP server 'node_repl' is not set\n"
+  }
+]
